@@ -66,6 +66,16 @@ const ProjectsSection = () => {
       demoUrl: "https://eman-abdallah.github.io/Todo-List/",
       githubUrl: "https://github.com/Eman-Abdallah/Todo-List",
       featured: false
+    },
+    {
+      id: 5,
+      title: " Drum Machine",
+      description: "Developed an interactive web-based drum machine that allows users to play and sequence drum sounds using both mouse clicks and keyboard inputs.",
+      image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&q=80&w=600",
+      technologies: ["React", "JavaScript", "CSS","Web Audio API"],
+      demoUrl: "https://eman-abdallah.github.io/drum-machine/",
+      githubUrl: "https://github.com/Eman-Abdallah/drum-machine",
+      featured: false
     }
   ];
   
