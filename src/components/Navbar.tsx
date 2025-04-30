@@ -28,7 +28,7 @@ const Navbar = () => {
     <header className={`fixed top-0 w-full z-50 transition-all duration-300 ${isScrolled ? "bg-theme-blue bg-opacity-90 backdrop-blur-sm py-4 shadow-md" : "py-6"}`}>
       <div className="container-lg flex justify-between items-center">
         <a href="#home" className="text-2xl font-bold text-theme-highlight font-poppins">
-          Dev<span className="text-theme-lightest">Portfolio</span>
+          Eman<span className="text-theme-lightest">Shaltout</span>
         </a>
         
         {/* Mobile menu button */}

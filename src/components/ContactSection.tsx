@@ -42,36 +42,36 @@ const ContactSection = () => {
           <div className="animate-fadeInLeft">
             <h3 className="text-2xl font-bold mb-6 text-theme-lightest">Let's Connect</h3>
             <p className="text-theme-slate mb-8">
-              Whether you have a project in mind, job opportunity, or just want to say hi, 
-              feel free to reach out. I'm always open to discussing new projects, creative ideas, 
-              or opportunities to be part of your vision.
+              I'm currently looking for new opportunities! Whether you have a project in mind, 
+              job opportunity, or just want to say hi, feel free to reach out. I'm always open to 
+              discussing new projects, creative ideas, or opportunities to be part of your vision.
             </p>
             
             <div className="flex flex-col space-y-4 mb-8">
               <a 
-                href="mailto:hello@example.com" 
+                href="mailto:eman.a.shalltout@gmail.com" 
                 className="flex items-center gap-3 text-theme-slate hover:text-theme-highlight transition-colors"
               >
                 <Mail size={20} className="text-theme-highlight" />
-                <span>hello@example.com</span>
+                <span>eman.a.shalltout@gmail.com</span>
               </a>
               <a 
-                href="https://linkedin.com" 
+                href="https://linkedin.com/in/eman-shaltot" 
                 target="_blank" 
                 rel="noopener noreferrer" 
                 className="flex items-center gap-3 text-theme-slate hover:text-theme-highlight transition-colors"
               >
                 <Linkedin size={20} className="text-theme-highlight" />
-                <span>linkedin.com/in/johndoe</span>
+                <span>linkedin.com/in/eman-shaltot</span>
               </a>
               <a 
-                href="https://github.com" 
+                href="https://github.com/Eman-Abdallah" 
                 target="_blank" 
                 rel="noopener noreferrer" 
                 className="flex items-center gap-3 text-theme-slate hover:text-theme-highlight transition-colors"
               >
                 <Github size={20} className="text-theme-highlight" />
-                <span>github.com/johndoe</span>
+                <span>github.com/Eman-Abdallah</span>
               </a>
             </div>
           </div>
