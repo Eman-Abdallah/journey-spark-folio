@@ -4,7 +4,7 @@ import { useEffect, useRef } from "react";
 interface Skill {
   name: string;
   level: number;
-  category: "frontend" | "backend" | "database" | "other";
+  category: "frontend" | "backend" | "database" | "other" | "ai";
   icon: string;
 }
 
@@ -13,7 +13,7 @@ const SkillsSection = () => {
   
   const skills: Skill[] = [
     { name: "Angular", level: 90, category: "frontend", icon: "🅰️" },
-    { name: "React", level: 80, category: "frontend", icon: "⚛️" },
+    { name: "SCSS/SASS", level: 85, category: "frontend", icon: "🎨" },
     { name: "TypeScript", level: 85, category: "frontend", icon: "TS" },
     { name: "HTML/CSS", level: 95, category: "frontend", icon: "🌐" },
     { name: ".NET Core", level: 90, category: "backend", icon: "🔷" },
@@ -24,12 +24,16 @@ const SkillsSection = () => {
     { name: "Entity Framework", level: 85, category: "database", icon: "🔷" },
     { name: "Azure", level: 80, category: "other", icon: "☁️" },
     { name: "DevOps", level: 75, category: "other", icon: "🔄" },
+    { name: "Machine Learning Basics", level: 70, category: "ai", icon: "🧠" },
+    { name: "Prompt Engineering", level: 80, category: "ai", icon: "🤖" },
+    { name: "AI Integration", level: 75, category: "ai", icon: "🔌" },
   ];
   
   const categories = [
     { id: "frontend", name: "Frontend" },
     { id: "backend", name: "Backend" },
     { id: "database", name: "Database" },
+    { id: "ai", name: "AI & Emerging Tech" },
     { id: "other", name: "Other" },
   ];
   
