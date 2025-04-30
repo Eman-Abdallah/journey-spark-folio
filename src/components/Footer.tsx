@@ -15,7 +15,7 @@ const Footer = () => {
         <div className="flex flex-col md:flex-row items-center justify-between">
           <div className="mb-4 md:mb-0">
             <p className="text-theme-lightest text-center md:text-left font-bold">
-              &copy; {new Date().getFullYear()} Eman Shaltout. All Rights Reserved.
+              &copy; {new Date().getFullYear()} <span className="text-theme-highlight">Eman Shaltout</span>. All Rights Reserved.
             </p>
           </div>
           
