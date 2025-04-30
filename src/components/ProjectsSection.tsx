@@ -2,7 +2,9 @@
 import { useRef, useEffect, useState } from "react";
 import { Button } from "@/components/ui/button";
 import { ExternalLink, Github, Code } from "lucide-react";
-
+import jumiaImage from "@/assets/jumia.png";
+import todoImage from "@/assets/todo-list.png";
+import imgProject from "@/assets/img-project.png";
 interface Project {
   id: number;
   title: string;
@@ -24,7 +26,7 @@ const ProjectsSection = () => {
       title: "E-commerce Platform",
       description: "A full-stack e-commerce solution with Angular frontend and Firebase backend. Features include user authentication, product management and cart functionality.",
       //image: "https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7?auto=format&fit=crop&q=80&w=600",
-      image: "assets/jumia.png",
+      image: jumiaImage,
       technologies: ["Angular", "Firebase", "TypeScript", "Bootstrap", "Azure"],
       demoUrl: "https://eman-abdallah.github.io/Jumia-clone/",
       githubUrl: "https://github.com/Eman-Abdallah/Jumia-clone",
@@ -52,7 +54,7 @@ const ProjectsSection = () => {
       id: 4,
       title: " IMG Project",
       description: "Interactive animated app using GSAP, Angular, and Swiper.",
-      image: "assets/img-project.png",
+      image: imgProject,
       technologies: ["Angular", "GSAP Animation", "SCSS"],
       demoUrl: "https://eman-abdallah.github.io/New-Project/",
       githubUrl: "https://github.com/Eman-Abdallah/New-Project",
@@ -62,7 +64,7 @@ const ProjectsSection = () => {
       id: 5,
       title: " Todo List",
       description: "A feature-rich Todo List application built with Angular and TypeScript, designed to help you manage your tasks efficiently.",
-      image:"assets/todo-list.png",
+      image:todoImage,
       technologies: ["Angular", "TypeScript", "SCSS"],
       demoUrl: "https://eman-abdallah.github.io/Todo-List/",
       githubUrl: "https://github.com/Eman-Abdallah/Todo-List",
