@@ -49,20 +49,20 @@ const ContactSection = () => {
             
             <div className="flex flex-col space-y-4 mb-8">
               <a 
-                href="mailto:eman.a.shalltout@gmail.com" 
+                href="mailto:emanshalltoot623@gmail.com" 
                 className="flex items-center gap-3 text-theme-slate hover:text-theme-highlight transition-colors"
               >
                 <Mail size={20} className="text-theme-highlight" />
-                <span>eman.a.shalltout@gmail.com</span>
+                <span>emanshalltoot623@gmail.com</span>
               </a>
               <a 
-                href="https://linkedin.com/in/eman-shaltot" 
+                href="https://www.linkedin.com/in/eman-abdallah-739971230/" 
                 target="_blank" 
                 rel="noopener noreferrer" 
                 className="flex items-center gap-3 text-theme-slate hover:text-theme-highlight transition-colors"
               >
                 <Linkedin size={20} className="text-theme-highlight" />
-                <span>linkedin.com/in/eman-shaltot</span>
+                <span>linkedin.com/in/eman-shaltout</span>
               </a>
               <a 
                 href="https://github.com/Eman-Abdallah" 
