@@ -42,9 +42,8 @@ const ContactSection = () => {
           <div className="animate-fadeInLeft">
             <h3 className="text-2xl font-bold mb-6 text-theme-lightest">Let's Connect</h3>
             <p className="text-theme-slate mb-8">
-              I'm currently looking for new opportunities! Whether you have a project in mind, 
-              job opportunity, or just want to say hi, feel free to reach out. I'm always open to 
-              discussing new projects, creative ideas, or opportunities to be part of your vision.
+              Whether you're looking for a developer to bring your ideas to life, have a job opportunity, or simply want to connect, 
+              feel free to reach out. I'm always excited to discuss innovative ideas and explore new possibilities.
             </p>
             
             <div className="flex flex-col space-y-4 mb-8">
