@@ -56,7 +56,7 @@ const ProjectsSection = () => {
       demoUrl: "https://eman-abdallah.github.io/New-Project/",
       githubUrl: "https://github.com/Eman-Abdallah/New-Project",
       featured: false
-    }
+    },
     {
       id: 5,
       title: " Todo List",
