@@ -41,7 +41,7 @@ const ContactSection = () => {
         <div className="grid md:grid-cols-2 gap-12">
           <div className="animate-fadeInLeft">
             <h3 className="text-2xl font-bold mb-6 text-theme-lightest">Let's Connect</h3>
-            <p className="text-theme-slate mb-8">
+            <p className="text-theme-highlight mb-8">
               Whether you're looking for a developer to bring your ideas to life, have a job opportunity, or simply want to connect, 
               feel free to reach out. I'm always excited to discuss innovative ideas and explore new possibilities.
             </p>
