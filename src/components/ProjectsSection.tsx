@@ -22,39 +22,49 @@ const ProjectsSection = () => {
     {
       id: 1,
       title: "E-commerce Platform",
-      description: "A full-stack e-commerce solution with Angular frontend and .NET backend. Features include user authentication, product management, cart functionality, and payment integration.",
+      description: "A full-stack e-commerce solution with Angular frontend and Firebase backend. Features include user authentication, product management and cart functionality.",
       image: "https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7?auto=format&fit=crop&q=80&w=600",
-      technologies: ["Angular", ".NET Core", "SQL Server", "Entity Framework", "Azure"],
-      demoUrl: "#",
-      githubUrl: "#",
+      technologies: ["Angular", "Firebase", "TypeScript", "Bootstrap", "Azure"],
+      demoUrl: "https://eman-abdallah.github.io/Jumia-clone/",
+      githubUrl: "https://github.com/Eman-Abdallah/Jumia-clone",
       featured: true
     },
     {
       id: 2,
-      title: "Enterprise CRM",
-      description: "Custom CRM system designed for small to medium businesses. Includes contact management, deal tracking, and reporting dashboards.",
+      title: "E-commerce Microservices Platform",
+      description: "Architected and developed a scalable e-commerce platform using a microservices approach, with each domain feature split into its own service for maintainability and flexibility.",
       image: "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?auto=format&fit=crop&q=80&w=600",
-      technologies: ["Angular", "TypeScript", ".NET Core", "SQL Server", "Azure DevOps"],
-      demoUrl: "#",
-      githubUrl: "#",
+      technologies: ["ASP.NET Core", "SQL Server", "", "REST APIs", "JWT","Entity Framework", "Swagger"],
+      githubUrl: "https://github.com/Eman-Abdallah/Shopping-App-using-microservices",
       featured: true
     },
     {
       id: 3,
-      title: "Task Management API",
-      description: "RESTful API for task management with user authentication, task CRUD operations, and team collaboration features.",
+      title: "Online Bookstore API",
+      description: "Developed a secure and scalable full-stack application for an online bookstore, implementing full CRUD operations, user authentication, and order processing.",
       image: "https://images.unsplash.com/photo-1649972904349-6e44c42644a7?auto=format&fit=crop&q=80&w=600",
-      technologies: ["C#", ".NET 6", "Entity Framework", "SQL Server", "Swagger"],
-      githubUrl: "#",
+      technologies: ["ASP.NET Core", "ASP.NET Identity", "Entity Framework", "SQL Server", "Swagger","Angular"],
+      githubUrl: "https://github.com/Eman-Abdallah/OnlineBookstoreAPI",
       featured: false
     },
     {
       id: 4,
-      title: "Analytics Dashboard",
-      description: "Interactive analytics dashboard for visualizing business metrics with real-time data updates.",
+      title: " IMG Project",
+      description: "Interactive animated app using GSAP, Angular, and Swiper.",
       image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&q=80&w=600",
-      technologies: ["Angular", "D3.js", "ASP.NET Core", "SignalR", "SQL Server"],
-      demoUrl: "#",
+      technologies: ["Angular", "GSAP Animation", "SCSS"],
+      demoUrl: "https://eman-abdallah.github.io/New-Project/",
+      githubUrl: "https://github.com/Eman-Abdallah/New-Project",
+      featured: false
+    }
+    {
+      id: 5,
+      title: " Todo List",
+      description: "A feature-rich Todo List application built with Angular and TypeScript, designed to help you manage your tasks efficiently.",
+      image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&q=80&w=600",
+      technologies: ["Angular", "TypeScript", "SCSS"],
+      demoUrl: "https://eman-abdallah.github.io/Todo-List/",
+      githubUrl: "https://github.com/Eman-Abdallah/Todo-List",
       featured: false
     }
   ];
