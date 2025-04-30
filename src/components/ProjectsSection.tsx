@@ -48,7 +48,7 @@ const ProjectsSection = () => {
       featured: false
     },
     {
-      id: 4,s
+      id: 4,
       title: " IMG Project",
       description: "Interactive animated app using GSAP, Angular, and Swiper.",
       image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&q=80&w=600",
