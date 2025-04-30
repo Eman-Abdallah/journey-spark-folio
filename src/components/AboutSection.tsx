@@ -42,17 +42,22 @@ const AboutSection = () => {
           className="opacity-0 translate-y-10 transform transition-all duration-700 ease-out grid md:grid-cols-2 gap-10 items-center"
         >
           <div className="order-2 md:order-1">
-            <p className="text-lg mb-4">
-              Hello! I'm Eman, a passionate Full-Stack Developer with expertise in creating beautiful and responsive web experiences along with robust backend solutions. My journey in development started with a curiosity about how websites work and evolved into a career creating engaging digital solutions.
-            </p>
-            
-            <p className="text-lg mb-4">
-              With a strong foundation in Angular, .NET Core, and SQL Server, I've worked on various projects that combine functionality with aesthetic appeal. I believe in creating applications that not only look good but also provide intuitive user experiences and solid performance.
-            </p>
-            
-            <p className="text-lg mb-6">
-              When I'm not coding, I enjoy exploring new technologies, learning advanced development techniques, and finding inspiration in art and nature. I'm always looking for new challenges and opportunities to grow as a developer.
-            </p>
+          <p className="text-lg mb-4">
+            Hello! I'm Eman — a passionate Full-Stack Developer who thrives on turning ideas into lovable digital experiences. My journey into coding began with a simple curiosity: "How do websites actually work?" That spark led me to explore the world of frontend and backend development, and I've never looked back since.
+          </p>
+
+          <p className="text-lg mb-4">
+            I specialize in building responsive, scalable applications using Angular, .NET Core, and SQL Server. Whether it's crafting a smooth user interface or designing robust backend APIs, I love creating solutions that are both beautiful and functional. One of my favorite recent projects involved building a book store platform where users could browse, purchase, and manage books — it was both a creative and technical challenge that I really enjoyed.
+          </p>
+
+          <p className="text-lg mb-4">
+            Lately, I've also been diving into the exciting world of <span className="inline-block bg-blue-100 text-blue-800 text-sm px-2 py-1 rounded-full">AI Enthusiast</span>
+            <strong>Artificial Intelligence</strong>. I'm particularly fascinated by how AI can enhance user experience, automate processes, and solve complex problems. I'm currently exploring areas like <strong>machine learning integration, smart recommendation systems</strong>, and how AI can complement full-stack applications.
+          </p>
+
+          <p className="text-lg mb-6">
+            Outside of code, I'm constantly learning — from new frontend frameworks to backend optimizations. I also draw creative inspiration from nature, art, and storytelling. Whether working solo or on a team, I bring empathy, curiosity, and a love for building things that truly matter. I'm always excited for the next challenge that pushes me to grow.
+          </p>
             
             <div className="flex flex-wrap gap-4 mt-6">
               <a href="#skills" className="btn-primary">My Skills</a>
