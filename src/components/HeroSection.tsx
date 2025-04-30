@@ -12,7 +12,7 @@ const HeroSection = () => {
 
     const animate = () => {
       if (titleRef.current) {
-        const iteration = Math.floor(frame / 5); // Slow down progression
+        const iteration = Math.floor(frame / 8); // Slow down progression
         const newText = originalText
           .split("")
           .map((letter, index) => {
