@@ -51,7 +51,7 @@ const Navbar = () => {
             </a>
           ))}
           <Button className="btn-outline" asChild>
-            <a href="/resume.pdf" download rel="noopener noreferrer">
+            <a href="/resume.pdf" download >
               Resume
             </a>
           </Button>
@@ -71,7 +71,7 @@ const Navbar = () => {
               </a>
             ))}
             <Button className="btn-primary w-full" asChild>
-              <a href="/resume.pdf" download rel="noopener noreferrer">
+              <a href="/resume.pdf" download >
                 Resume
               </a>
             </Button>
