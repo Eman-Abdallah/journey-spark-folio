@@ -4,7 +4,7 @@ import { useEffect, useRef } from "react";
 interface Skill {
   name: string;
   level: number;
-  category: "frontend" | "backend" | "database" | "other" | "ai";
+  category: "frontend" | "backend" | "other" | "ai";
   icon: string;
 }
 
@@ -30,7 +30,6 @@ const SkillsSection = () => {
   const categories = [
     { id: "frontend", name: "Frontend" },
     { id: "backend", name: "Backend" },
-    { id: "database", name: "Database" },
     { id: "ai", name: "AI & Emerging Tech" },
     { id: "other", name: "Other" },
   ];
