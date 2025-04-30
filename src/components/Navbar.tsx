@@ -45,7 +45,7 @@ const Navbar = () => {
             <a 
               key={link.name} 
               href={link.href}
-              className="nav-link font-bold"
+              className="nav-link text-theme-lightest font-bold"
             >
              {link.name}
             </a>
