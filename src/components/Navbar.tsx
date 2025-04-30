@@ -50,11 +50,7 @@ const Navbar = () => {
              {link.name}
             </a>
           ))}
-          <Button className="btn-outline font-bold" asChild>
-            <a href="/resume.pdf" download >
-              Resume
-            </a>
-          </Button>
+
         </nav>
         
         {/* Mobile Navigation */}
@@ -70,11 +66,6 @@ const Navbar = () => {
                 {link.name}
               </a>
             ))}
-            <Button className="btn-primary w-full font-bold" asChild>
-              <a href="/resume.pdf" download >
-                Resume
-              </a>
-            </Button>
           </div>
         )}
       </div>

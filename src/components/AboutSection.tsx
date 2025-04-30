@@ -55,7 +55,11 @@ const AboutSection = () => {
           </p>
             
             <div className="flex flex-wrap gap-4 mt-6">
-              <a href="#skills" className="btn-primary">My Skills</a>
+            <button className="btn-primary font-bold">
+            <a href="assets/resume.pdf" download >
+              Download My Resume
+            </a>
+          </button>
               <a href="#projects" className="btn-outline">View Projects</a>
             </div>
           </div>
