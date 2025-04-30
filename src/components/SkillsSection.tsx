@@ -4,7 +4,7 @@ import { useEffect, useRef } from "react";
 interface Skill {
   name: string;
   level: number;
-  category: "frontend" | "backend" | "other" | "ai";
+  category: "frontend" | "backend" | "ai";
   icon: string;
 }
 
@@ -20,8 +20,8 @@ const SkillsSection = () => {
     { name: "RESTful APIs", level: 85, category: "backend", icon: "🔄" },
     { name: "SQL Server", level: 90, category: "backend", icon: "🗃️" },
     { name: "Entity Framework", level: 85, category: "backend", icon: "🔷" },
-    { name: "Azure", level: 80, category: "other", icon: "☁️" },
-    { name: "DevOps", level: 75, category: "other", icon: "🔄" },
+    // { name: "Azure", level: 80, category: "other", icon: "☁️" },
+    // { name: "DevOps", level: 75, category: "other", icon: "🔄" },
     { name: "Machine Learning Basics", level: 70, category: "ai", icon: "🧠" },
     { name: "Prompt Engineering", level: 80, category: "ai", icon: "🤖" },
     { name: "AI Integration", level: 75, category: "ai", icon: "🔌" },
@@ -31,7 +31,7 @@ const SkillsSection = () => {
     { id: "frontend", name: "Frontend" },
     { id: "backend", name: "Backend" },
     { id: "ai", name: "AI & Emerging Tech" },
-    { id: "other", name: "Other" },
+    //{ id: "other", name: "Other" },
   ];
   
   useEffect(() => {
