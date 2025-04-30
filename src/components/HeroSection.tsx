@@ -4,51 +4,40 @@ import { ArrowDown, Code, Database, Server } from "lucide-react";
 
 const HeroSection = () => {
   const titleRef = useRef<HTMLHeadingElement>(null);
-  
+
   useEffect(() => {
     const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-    let interval: NodeJS.Timeout | null = null;
-    
-    const startAnimation = () => {
-      let iteration = 0;
-      const originalText = "Full-Stack Developer";
-      
+    const originalText = "Full-Stack Developer";
+    let frame = 0;
+
+    const animate = () => {
       if (titleRef.current) {
-        clearInterval(interval as NodeJS.Timeout);
-        
-        interval = setInterval(() => {
-          if (titleRef.current) {
-            titleRef.current.innerText = originalText
-              .split("")
-              .map((letter, index) => {
-                if (letter === " " || letter === "-") return letter;
-                if (index < iteration) {
-                  return originalText[index];
-                }
-                return letters[Math.floor(Math.random() * 26)];
-              })
-              .join("");
-            
-            if (iteration >= originalText.length) {
-              clearInterval(interval as NodeJS.Timeout);
+        const iteration = Math.floor(frame / 5); // Slow down progression
+        const newText = originalText
+          .split("")
+          .map((letter, index) => {
+            if (letter === " " || letter === "-") return letter;
+            if (index < iteration) {
+              return originalText[index];
             }
-            
-            iteration += 1 / 2;
-          }
-        }, 40);
+            return letters[Math.floor(Math.random() * 26)];
+          })
+          .join("");
+
+        titleRef.current.innerText = newText;
+
+        if (iteration <= originalText.length) {
+          frame++;
+          requestAnimationFrame(animate);
+        }
       }
     };
-    
-    // Run animation on load
-    startAnimation();
-    
-    // Run animation on hover
-    titleRef.current?.addEventListener("mouseover", startAnimation);
-    
-    return () => {
-      if (interval) clearInterval(interval);
-      titleRef.current?.removeEventListener("mouseover", startAnimation);
-    };
+
+    const timeout = setTimeout(() => {
+      requestAnimationFrame(animate);
+    }, 500); // Delay before animation starts
+
+    return () => clearTimeout(timeout); // Cleanup
   }, []);
   
   return (
