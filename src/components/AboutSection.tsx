@@ -1,5 +1,6 @@
 
 import { useEffect, useRef } from "react";
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 
 const AboutSection = () => {
   const sectionRef = useRef<HTMLDivElement>(null);
@@ -59,15 +60,16 @@ const AboutSection = () => {
             </div>
           </div>
           
-          <div className="order-1 md:order-2 relative">
-            <div className="rounded-lg overflow-hidden relative z-10 mx-auto max-w-sm">
-              <div className="aspect-ratio-1 bg-theme-highlight/20 rounded-lg flex items-center justify-center">
-                {/* You can replace this with an actual image of yourself */}
-                <div className="text-8xl flex items-center justify-center h-full w-full border-2 border-theme-highlight rounded-lg">
-                  <span className="text-theme-highlight">👩‍💻</span>
-                </div>
+          <div className="order-1 md:order-2 relative flex justify-center">
+            <div className="relative">
+              <div className="w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden border-4 border-theme-highlight z-10 relative">
+                <img 
+                  src="/lovable-uploads/68cff6fd-dd49-4dcd-9d0a-fab1495b1651.png" 
+                  alt="Eman Shaltout" 
+                  className="w-full h-full object-cover"
+                />
               </div>
-              <div className="absolute inset-0 border-2 border-theme-highlight rounded-lg transform translate-x-4 translate-y-4 -z-10"></div>
+              <div className="absolute -bottom-3 -right-3 w-full h-full border-4 border-theme-teal rounded-full -z-10"></div>
             </div>
           </div>
         </div>

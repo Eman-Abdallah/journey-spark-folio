@@ -54,11 +54,13 @@ export default {
           foreground: "hsl(var(--card-foreground))"
         },
         theme: {
-          blue: "#1E293B",
-          lightBlue: "#2A3A51",
-          lightest: "#F1F5F9",
-          slate: "#94A3B8",
-          highlight: "#38BDF8"
+          blue: "#2A5B6C",        // Darker teal from background
+          lightBlue: "#5299A3",   // Medium teal from background
+          lightest: "#F1F5F9",    // Keep light color for text
+          slate: "#94A3B8",       // Keep slate for secondary text
+          highlight: "#FF9EB1",   // Pink color from hijab
+          teal: "#70B2B8",        // Light teal from background
+          darkPink: "#D47A93"     // Darker shade of pink for hover effects
         }
       },
       borderRadius: {
