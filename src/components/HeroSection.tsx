@@ -54,7 +54,7 @@ const HeroSection = () => {
           >
             Full-Stack Developer
           </h2>
-          <p className="text-xl text-theme-slate max-w-lg mb-8">
+          <p className="text-xl text-theme-lightest max-w-lg mb-8">
             I build exceptional and accessible digital experiences for the web. 
             Specializing in Angular, .NET, and SQL Server with a passion for creating beautiful and functional applications.
           </p>
@@ -70,15 +70,15 @@ const HeroSection = () => {
           <div className="flex gap-6 mt-10">
             <div className="flex items-center gap-2">
               <Code size={20} className="text-theme-highlight" />
-              <span className="text-theme-slate">Frontend</span>
+              <span className="text-theme-lightest">Frontend</span>
             </div>
             <div className="flex items-center gap-2">
               <Server size={20} className="text-theme-highlight" />
-              <span className="text-theme-slate">Backend</span>
+              <span className="text-theme-lightest">Backend</span>
             </div>
             <div className="flex items-center gap-2">
               <Database size={20} className="text-theme-highlight" />
-              <span className="text-theme-slate">Database</span>
+              <span className="text-theme-lightest">Database</span>
             </div>
           </div>
         </div>
