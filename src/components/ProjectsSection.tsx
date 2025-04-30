@@ -34,7 +34,7 @@ const ProjectsSection = () => {
       title: "E-commerce Microservices Platform",
       description: "Architected and developed a scalable e-commerce platform using a microservices approach, with each domain feature split into its own service for maintainability and flexibility.",
       image: "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?auto=format&fit=crop&q=80&w=600",
-      technologies: ["ASP.NET Core", "SQL Server", "", "REST APIs", "JWT","Entity Framework", "Swagger"],
+      technologies: [".NET Core", "SQL Server", "REST APIs", "JWT","Entity Framework", "Swagger"],
       githubUrl: "https://github.com/Eman-Abdallah/Shopping-App-using-microservices",
       featured: true
     },
@@ -43,7 +43,7 @@ const ProjectsSection = () => {
       title: "Online Bookstore API",
       description: "Developed a secure and scalable full-stack application for an online bookstore, implementing full CRUD operations, user authentication, and order processing.",
       image: "https://images.unsplash.com/photo-1649972904349-6e44c42644a7?auto=format&fit=crop&q=80&w=600",
-      technologies: ["ASP.NET Core", "ASP.NET Identity", "Entity Framework", "SQL Server", "Swagger","Angular"],
+      technologies: [".NET Core", "ASP.NET Identity", "Entity Framework", "SQL Server", "Swagger","Angular"],
       githubUrl: "https://github.com/Eman-Abdallah/OnlineBookstoreAPI",
       featured: false
     },
