@@ -5,6 +5,8 @@ import { ExternalLink, Github, Code } from "lucide-react";
 import jumiaImage from "@/assets/jumia.png";
 import todoImage from "@/assets/todo-list.png";
 import imgProject from "@/assets/img-project.png";
+import bookStore from "@/assets/book-Sore.png";
+import eCommerce from "@/assets/e-commarece.png";
 interface Project {
   id: number;
   title: string;
@@ -36,7 +38,7 @@ const ProjectsSection = () => {
       id: 2,
       title: "E-commerce Microservices Platform",
       description: "Architected and developed a scalable e-commerce platform using a microservices approach, with each domain feature split into its own service for maintainability and flexibility.",
-      image: "https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7?auto=format&fit=crop&q=80&w=600",
+      image: eCommerce,
       technologies: [".NET Core", "SQL Server", "REST APIs", "JWT","Entity Framework", "Swagger"],
       githubUrl: "https://github.com/Eman-Abdallah/Shopping-App-using-microservices",
       featured: true
@@ -45,7 +47,7 @@ const ProjectsSection = () => {
       id: 3,
       title: "Online Bookstore API",
       description: "Developed a secure and scalable full-stack application for an online bookstore, implementing full CRUD operations, user authentication, and order processing.",
-      image: "https://images.unsplash.com/photo-1649972904349-6e44c42644a7?auto=format&fit=crop&q=80&w=600",
+      image: bookStore,
       technologies: [".NET Core", "ASP.NET Identity", "Entity Framework", "SQL Server", "Swagger","Angular"],
       githubUrl: "https://github.com/Eman-Abdallah/OnlineBookstoreAPI",
       featured: false
@@ -70,16 +72,16 @@ const ProjectsSection = () => {
       githubUrl: "https://github.com/Eman-Abdallah/Todo-List",
       featured: false
     },
-    {
-      id: 5,
-      title: " Drum Machine",
-      description: "Developed an interactive web-based drum machine that allows users to play and sequence drum sounds using both mouse clicks and keyboard inputs.",
-      image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&q=80&w=600",
-      technologies: ["React", "JavaScript", "CSS","Web Audio API"],
-      demoUrl: "https://eman-abdallah.github.io/drum-machine/",
-      githubUrl: "https://github.com/Eman-Abdallah/drum-machine",
-      featured: false
-    }
+    // {
+    //   id: 6,
+    //   title: " Drum Machine",
+    //   description: "Developed an interactive web-based drum machine that allows users to play and sequence drum sounds using both mouse clicks and keyboard inputs.",
+    //   image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&q=80&w=600",
+    //   technologies: ["React", "JavaScript", "CSS","Web Audio API"],
+    //   demoUrl: "https://eman-abdallah.github.io/drum-machine/",
+    //   githubUrl: "https://github.com/Eman-Abdallah/drum-machine",
+    //   featured: false
+    // }
   ];
   
   const filters = [
