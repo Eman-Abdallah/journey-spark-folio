@@ -45,12 +45,12 @@ const Navbar = () => {
             <a 
               key={link.name} 
               href={link.href}
-              className="nav-link"
+              className="nav-link font-bold"
             >
              {link.name}
             </a>
           ))}
-          <Button className="btn-outline" asChild>
+          <Button className="btn-outline font-bold" asChild>
             <a href="/resume.pdf" download >
               Resume
             </a>
@@ -64,13 +64,13 @@ const Navbar = () => {
               <a 
                 key={link.name} 
                 href={link.href}
-                className="text-theme-lightest hover:text-theme-highlight transition-colors"
+                className="text-theme-lightest hover:text-theme-highlight transition-colors font-bold"
                 onClick={() => setMobileMenuOpen(false)}
               >
                 {link.name}
               </a>
             ))}
-            <Button className="btn-primary w-full" asChild>
+            <Button className="btn-primary w-full font-bold" asChild>
               <a href="/resume.pdf" download >
                 Resume
               </a>
