@@ -47,7 +47,7 @@ const Navbar = () => {
               href={link.href}
               className="nav-link"
             >
-              <span className="text-theme-highlight mr-1">{index + 1}.</span> {link.name}
+             {link.name}
             </a>
           ))}
           <Button className="btn-outline" asChild>
