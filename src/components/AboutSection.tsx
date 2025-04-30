@@ -53,10 +53,6 @@ const AboutSection = () => {
           <p className="text-lg mb-4">
             Lately, I've also been diving into the exciting world of <strong>Artificial Intelligence</strong>. I'm particularly fascinated by how AI can enhance user experience, automate processes, and solve complex problems. I'm currently exploring areas like <strong>machine learning integration, smart recommendation systems</strong>, and how AI can complement full-stack applications.
           </p>
-
-          <p className="text-lg mb-6">
-            Outside of code, I'm constantly learning — from new frontend frameworks to backend optimizations. I also draw creative inspiration from nature, art, and storytelling. Whether working solo or on a team, I bring empathy, curiosity, and a love for building things that truly matter. I'm always excited for the next challenge that pushes me to grow.
-          </p>
             
             <div className="flex flex-wrap gap-4 mt-6">
               <a href="#skills" className="btn-primary">My Skills</a>
