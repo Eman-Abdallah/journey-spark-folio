@@ -51,8 +51,7 @@ const AboutSection = () => {
           </p>
 
           <p className="text-lg mb-4">
-            Lately, I've also been diving into the exciting world of <span className="inline-block bg-blue-100 text-blue-800 text-sm px-2 py-1 rounded-full">AI Enthusiast</span>
-            <strong>Artificial Intelligence</strong>. I'm particularly fascinated by how AI can enhance user experience, automate processes, and solve complex problems. I'm currently exploring areas like <strong>machine learning integration, smart recommendation systems</strong>, and how AI can complement full-stack applications.
+            Lately, I've also been diving into the exciting world of <strong>Artificial Intelligence</strong>. I'm particularly fascinated by how AI can enhance user experience, automate processes, and solve complex problems. I'm currently exploring areas like <strong>machine learning integration, smart recommendation systems</strong>, and how AI can complement full-stack applications.
           </p>
 
           <p className="text-lg mb-6">
