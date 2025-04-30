@@ -74,18 +74,23 @@ const ProjectsSection = () => {
   
   useEffect(() => {
     const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          const projects = entry.target.querySelectorAll(".project-card");
-          projects.forEach((project, index) => {
-            setTimeout(() => {
-              project.classList.add("animate-fadeIn");
-            }, index * 200);
-          });
-          observer.unobserve(entry.target);
-        }
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            const projects = entry.target.querySelectorAll(".project-card");
+            projects.forEach((project, index) => {
+              setTimeout(() => {
+                project.classList.add("opacity-100");
+                project.classList.remove("opacity-0");
+                project.classList.add("translate-y-0");
+                project.classList.remove("translate-y-10");
+              }, index * 200);
+            });
+            observer.unobserve(entry.target);
+          }
+        });
       },
-      { threshold: 0.1 }
+      { threshold: 0.1, rootMargin: "0px" }
     );
     
     if (sectionRef.current) {
@@ -97,7 +102,7 @@ const ProjectsSection = () => {
         observer.unobserve(sectionRef.current);
       }
     };
-  }, []);
+  }, [selectedFilter]); // Re-run when filter changes
   
   return (
     <section id="projects" className="bg-theme-lightBlue">
@@ -122,8 +127,11 @@ const ProjectsSection = () => {
         
         <div ref={sectionRef} className="grid md:grid-cols-2 gap-8">
           {filteredProjects.map(project => (
-            <div key={project.id} className="project-card opacity-0">
-              <div className="relative h-64 rounded-lg overflow-hidden">
+            <div 
+              key={project.id} 
+              className="project-card opacity-0 translate-y-10 transform transition-all duration-500 ease-out"
+            >
+              <div className="relative h-64 rounded-lg overflow-hidden shadow-lg">
                 <img 
                   src={project.image} 
                   alt={project.title}
@@ -175,7 +183,7 @@ const ProjectsSection = () => {
         <div className="text-center mt-12">
           <Button asChild className="btn-outline">
             <a 
-              href="https://github.com/yourusername" 
+              href="https://github.com/Eman-Abdallah" 
               target="_blank" 
               rel="noopener noreferrer"
               className="flex items-center gap-2"

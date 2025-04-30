@@ -54,11 +54,11 @@ export default {
           foreground: "hsl(var(--card-foreground))"
         },
         theme: {
-          blue: "#0A192F",
-          lightBlue: "#112240",
-          lightest: "#CCD6F6",
-          slate: "#8892B0",
-          highlight: "#64FFDA"
+          blue: "#1E293B",
+          lightBlue: "#2A3A51",
+          lightest: "#F1F5F9",
+          slate: "#94A3B8",
+          highlight: "#38BDF8"
         }
       },
       borderRadius: {
@@ -90,6 +90,10 @@ export default {
         pulse: {
           '0%, 100%': { opacity: '1' },
           '50%': { opacity: '0.5' }
+        },
+        bounce: {
+          '0%, 100%': { transform: 'translateY(0)' },
+          '50%': { transform: 'translateY(-10px)' }
         }
       },
       animation: {
@@ -98,7 +102,8 @@ export default {
         "fadeIn": "fadeIn 0.6s ease-out",
         "fadeInLeft": "fadeInLeft 0.6s ease-out",
         "fadeInRight": "fadeInRight 0.6s ease-out",
-        "pulse-slow": "pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite"
+        "pulse-slow": "pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite",
+        "bounce": "bounce 2s infinite"
       },
       fontFamily: {
         inter: ['Inter', 'sans-serif'],

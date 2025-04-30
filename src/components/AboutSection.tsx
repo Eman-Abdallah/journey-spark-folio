@@ -8,11 +8,16 @@ const AboutSection = () => {
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
-          entry.target.classList.add("animate-fadeIn");
+          // Apply animation class to the target
+          entry.target.classList.add("opacity-100");
+          entry.target.classList.remove("opacity-0");
+          entry.target.classList.add("translate-y-0");
+          entry.target.classList.remove("translate-y-10");
+          // Once animation is triggered, no need to observe anymore
           observer.unobserve(entry.target);
         }
       },
-      { threshold: 0.2 }
+      { threshold: 0.2, rootMargin: "0px" }
     );
     
     if (sectionRef.current) {
@@ -31,18 +36,21 @@ const AboutSection = () => {
       <div className="container-lg">
         <h2 className="section-title">About Me</h2>
         
-        <div ref={sectionRef} className="opacity-0 grid md:grid-cols-2 gap-10 items-center">
+        <div 
+          ref={sectionRef} 
+          className="opacity-0 translate-y-10 transform transition-all duration-700 ease-out grid md:grid-cols-2 gap-10 items-center"
+        >
           <div className="order-2 md:order-1">
             <p className="text-lg mb-4">
-              Hello! I'm Eman, a passionate Frontend Developer with expertise in creating beautiful and responsive web experiences. My journey in web development started with a curiosity about how websites work and evolved into a career creating engaging digital interfaces.
+              Hello! I'm Eman, a passionate Full-Stack Developer with expertise in creating beautiful and responsive web experiences along with robust backend solutions. My journey in development started with a curiosity about how websites work and evolved into a career creating engaging digital solutions.
             </p>
             
             <p className="text-lg mb-4">
-              With a strong foundation in Angular and modern frontend technologies, I've worked on various projects that combine functionality with aesthetic appeal. I believe in creating websites that not only look good but also provide intuitive user experiences.
+              With a strong foundation in Angular, .NET Core, and SQL Server, I've worked on various projects that combine functionality with aesthetic appeal. I believe in creating applications that not only look good but also provide intuitive user experiences and solid performance.
             </p>
             
             <p className="text-lg mb-6">
-              When I'm not coding, I enjoy exploring new design trends, learning new technologies, and finding inspiration in art and nature. I'm always looking for new challenges and opportunities to grow as a developer.
+              When I'm not coding, I enjoy exploring new technologies, learning advanced development techniques, and finding inspiration in art and nature. I'm always looking for new challenges and opportunities to grow as a developer.
             </p>
             
             <div className="flex flex-wrap gap-4 mt-6">

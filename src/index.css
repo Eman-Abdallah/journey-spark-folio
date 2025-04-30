@@ -13,7 +13,7 @@
     --card-foreground: 210 40% 98%;
     --popover: 222 47% 11%;
     --popover-foreground: 210 40% 98%;
-    --primary: 214 80% 56%;
+    --primary: 199 89% 48%;
     --primary-foreground: 210 40% 98%;
     --secondary: 217 33% 17%;
     --secondary-foreground: 210 40% 98%;
@@ -84,6 +84,16 @@
 
   .skill-bar {
     @apply h-2 bg-theme-highlight rounded-full relative;
+    animation: skillAnimation 1.5s ease-out forwards;
+  }
+
+  @keyframes skillAnimation {
+    from {
+      transform: translateX(-100%);
+    }
+    to {
+      transform: translateX(0);
+    }
   }
 
   .glass-card {

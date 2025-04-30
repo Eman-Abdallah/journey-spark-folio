@@ -35,18 +35,24 @@ const SkillsSection = () => {
   
   useEffect(() => {
     const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          const skills = entry.target.querySelectorAll(".skill-item");
-          skills.forEach((skill, index) => {
-            setTimeout(() => {
-              skill.classList.add("animate-fadeIn");
-            }, index * 100);
-          });
-          observer.unobserve(entry.target);
-        }
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            // Get all skills in the visible section
+            const skills = entry.target.querySelectorAll(".skill-item");
+            skills.forEach((skill, index) => {
+              setTimeout(() => {
+                skill.classList.add("opacity-100");
+                skill.classList.remove("opacity-0");
+                skill.classList.add("translate-y-0");
+                skill.classList.remove("translate-y-10");
+              }, index * 100);
+            });
+            observer.unobserve(entry.target);
+          }
+        });
       },
-      { threshold: 0.2 }
+      { threshold: 0.1, rootMargin: "0px" }
     );
     
     if (sectionRef.current) {
@@ -78,7 +84,7 @@ const SkillsSection = () => {
                   .map((skill, index) => (
                     <div 
                       key={skill.name} 
-                      className="skill-item opacity-0 card flex flex-col"
+                      className="skill-item opacity-0 translate-y-10 transform transition-all duration-500 ease-out card flex flex-col"
                     >
                       <div className="flex justify-between items-center mb-2">
                         <div className="flex items-center">
@@ -87,10 +93,13 @@ const SkillsSection = () => {
                         </div>
                         <span className="text-theme-highlight">{skill.level}%</span>
                       </div>
-                      <div className="w-full bg-theme-blue rounded-full h-2 mt-2">
+                      <div className="w-full bg-theme-blue rounded-full h-2 mt-2 overflow-hidden">
                         <div 
-                          className="skill-bar"
-                          style={{ width: `${skill.level}%` }}
+                          className="skill-bar transition-all duration-1000 ease-out"
+                          style={{ width: `${skill.level}%`, transform: "translateX(-100%)" }}
+                          onAnimationEnd={(e) => {
+                            e.currentTarget.style.transform = "translateX(0)";
+                          }}
                         ></div>
                       </div>
                     </div>

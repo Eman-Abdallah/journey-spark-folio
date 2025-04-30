@@ -1,6 +1,6 @@
 
 import { useEffect, useRef } from "react";
-import { ChevronDown } from "lucide-react";
+import { ArrowDown, Code, Database, Server } from "lucide-react";
 
 const HeroSection = () => {
   const titleRef = useRef<HTMLHeadingElement>(null);
@@ -11,7 +11,7 @@ const HeroSection = () => {
     
     const startAnimation = () => {
       let iteration = 0;
-      const originalText = "Frontend Developer";
+      const originalText = "Full-Stack Developer";
       
       if (titleRef.current) {
         clearInterval(interval as NodeJS.Timeout);
@@ -21,7 +21,7 @@ const HeroSection = () => {
             titleRef.current.innerText = originalText
               .split("")
               .map((letter, index) => {
-                if (letter === " ") return " ";
+                if (letter === " " || letter === "-") return letter;
                 if (index < iteration) {
                   return originalText[index];
                 }
@@ -33,9 +33,9 @@ const HeroSection = () => {
               clearInterval(interval as NodeJS.Timeout);
             }
             
-            iteration += 1 / 3;
+            iteration += 1 / 2;
           }
-        }, 30);
+        }, 40);
       }
     };
     
@@ -63,11 +63,11 @@ const HeroSection = () => {
             ref={titleRef}
             className="text-4xl md:text-6xl font-bold text-theme-slate mb-6"
           >
-            Frontend Developer
+            Full-Stack Developer
           </h2>
           <p className="text-xl text-theme-slate max-w-lg mb-8">
             I build exceptional and accessible digital experiences for the web. 
-            Specializing in Angular and frontend development with a passion for creating beautiful interfaces.
+            Specializing in Angular, .NET, and SQL Server with a passion for creating beautiful and functional applications.
           </p>
           <div className="flex flex-wrap gap-4">
             <a href="#projects" className="btn-primary">
@@ -77,15 +77,30 @@ const HeroSection = () => {
               Contact Me
             </a>
           </div>
+          
+          <div className="flex gap-6 mt-10">
+            <div className="flex items-center gap-2">
+              <Code size={20} className="text-theme-highlight" />
+              <span className="text-theme-slate">Frontend</span>
+            </div>
+            <div className="flex items-center gap-2">
+              <Server size={20} className="text-theme-highlight" />
+              <span className="text-theme-slate">Backend</span>
+            </div>
+            <div className="flex items-center gap-2">
+              <Database size={20} className="text-theme-highlight" />
+              <span className="text-theme-slate">Database</span>
+            </div>
+          </div>
         </div>
       </div>
       
       <a 
         href="#about" 
-        className="absolute bottom-12 left-1/2 transform -translate-x-1/2 animate-pulse-slow"
+        className="absolute bottom-12 left-1/2 transform -translate-x-1/2 animate-bounce"
         aria-label="Scroll to About section"
       >
-        <ChevronDown size={32} className="text-theme-highlight" />
+        <ArrowDown size={32} className="text-theme-highlight" />
       </a>
       
       <div className="absolute top-1/2 right-10 transform -translate-y-1/2 hidden lg:flex flex-col gap-6">
