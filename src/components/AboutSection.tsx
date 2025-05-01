@@ -38,7 +38,7 @@ const AboutSection = () => {
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                 />
               </div>
-              <div className="absolute -bottom-3 -right-3 w-full h-full border-4 border-theme-teal rounded-full -z-10"></div>
+              <div className="absolute -bottom-3 -right-3 w-full h-full border-4 border-theme-teal rounded-full "></div>
             </div>
           </motion.div>
 
