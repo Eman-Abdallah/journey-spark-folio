@@ -79,7 +79,7 @@ const SkillsSection = () => {
   };
 
   return (
-    <section id="skills" className="bg-theme-lightBlue">
+    <section id="skills" >
       <div className="container-lg">
         <h2 className="section-title">Skills & Expertise</h2>
 
