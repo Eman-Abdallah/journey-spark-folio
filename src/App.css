@@ -40,3 +40,8 @@
 .read-the-docs {
   color: #888;
 }
+@media screen and (max-width:500px) {
+  .container-lg{
+    padding: 0 !important;
+  }
+}
