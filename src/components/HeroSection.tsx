@@ -1,45 +1,15 @@
-
-import { useEffect, useRef } from "react";
+import { useRef } from "react";
 import { ArrowDown, Code, Database, Server } from "lucide-react";
+import Typewriter from "./ui/Typewriter";
 
 const HeroSection = () => {
-  const titleRef = useRef<HTMLSpanElement>(null);
-
-  useEffect(() => {
-    const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-    const originalText = "Full-Stack Developer";
-    let frame = 0;
-
-    const animate = () => {
-      if (titleRef.current) {
-        const iteration = Math.floor(frame / 3); // Slow down progression
-        const newText = originalText
-          .split("")
-          .map((letter, index) => {
-            if (letter === " " || letter === "-") return letter;
-            if (index < iteration) {
-              return originalText[index];
-            }
-            return letters[Math.floor(Math.random() * 26)];
-          })
-          .join("");
-
-        // Update the inner text without affecting layout
-        titleRef.current.textContent = newText;
-
-        if (iteration <= originalText.length) {
-          frame++;
-          requestAnimationFrame(animate);
-        }
-      }
-    };
-
-    const timeout = setTimeout(() => {
-      requestAnimationFrame(animate);
-    }, 500); // Delay before animation starts
-
-    return () => clearTimeout(timeout); // Cleanup
-  }, []);
+  const specializations = [
+    "Full-Stack Developer", 
+    "Angular Expert", 
+    "UI/UX Designer", 
+    ".NET Developer", 
+    "SQL Server Engineer"
+  ];
   
   return (
     <section id="home" className="min-h-screen flex flex-col justify-center relative px-6">
@@ -50,7 +20,14 @@ const HeroSection = () => {
             Eman Shaltout
           </h1>
           <h2 className="text-4xl md:text-6xl font-bold text-theme-slate mb-6 h-[56px] md:h-[72px] flex items-center">
-            <span ref={titleRef} className="inline-block">Full-Stack Developer</span>
+            <Typewriter 
+              text={specializations}
+              speed={80}
+              waitTime={1800}
+              deleteSpeed={50}
+              cursorChar="|"
+              className="inline-block"
+            />
           </h2>
           <p className="text-xl text-theme-lightest max-w-lg mb-8">
             I build exceptional and accessible digital experiences for the web. 
