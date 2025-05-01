@@ -1,6 +1,6 @@
-import { useEffect, useRef } from "react";
+
+import { useEffect, useRef, useState } from "react";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { Progress } from "@/components/ui/progress";
 import { Award, BarChart, ChartBar } from "lucide-react";
 
 interface Skill {
@@ -12,6 +12,7 @@ interface Skill {
 
 const SkillsSection = () => {
   const sectionRef = useRef<HTMLDivElement>(null);
+  const [activeTab, setActiveTab] = useState<string>("frontend");
 
   const skills: Skill[] = [
     { name: "Angular", level: 90, category: "frontend", icon: "🅰️" },
@@ -70,7 +71,12 @@ const SkillsSection = () => {
         observer.unobserve(sectionRef.current);
       }
     };
-  }, []);
+  }, [activeTab]);
+
+  // Function to handle tab changes
+  const handleTabChange = (value: string) => {
+    setActiveTab(value);
+  };
 
   return (
     <section id="skills" className="bg-theme-lightBlue">
@@ -78,7 +84,7 @@ const SkillsSection = () => {
         <h2 className="section-title">Skills & Expertise</h2>
 
         <div ref={sectionRef} className="mt-10">
-          <Tabs defaultValue="frontend" className="w-full">
+          <Tabs value={activeTab} onValueChange={handleTabChange} className="w-full">
             <TabsList className="grid grid-cols-3 mb-8 w-full max-w-md mx-auto">
               {categories.map((category) => {
                 const Icon = category.icon;
