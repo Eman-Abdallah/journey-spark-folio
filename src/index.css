@@ -144,4 +144,7 @@
   .hero-sm{
     margin-left: -26px !important;
   }
+  .desc-text{
+    font-size: 13px !important;
+  }
 }

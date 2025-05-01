@@ -165,7 +165,7 @@ const ProjectsSection = () => {
                 />
                 <div className="project-card-overlay">
                   <h3 className="text-xl font-bold mb-2 text-theme-highlight">{project.title}</h3>
-                  <p className="text-theme-slate mb-4">{project.description}</p>
+                  <p className="text-theme-slate mb-4 desc-text">{project.description}</p>
                   <div className="flex flex-wrap gap-2 mb-4">
                     {project.technologies.map(tech => (
                       <span 
