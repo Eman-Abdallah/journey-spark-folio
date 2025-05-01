@@ -41,7 +41,7 @@
   color: #888;
 }
 @media screen and (max-width:500px) {
-  .container-lg{
-    padding: 0 !important;
+  .hero-sm{
+    margin-left: -26px !important;
   }
 }

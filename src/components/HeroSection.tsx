@@ -14,7 +14,7 @@ const HeroSection = () => {
   return (
     <section id="home" className="min-h-screen flex flex-col justify-center relative px-6">
       <div className="container-lg">
-        <div className="max-w-3xl animate-fadeIn">
+        <div className="max-w-3xl animate-fadeIn hero-sm">
           <p className="text-theme-highlight mb-4 font-mono">Hi, my name is</p>
           <h1 className="text-5xl md:text-7xl font-bold mb-2 text-theme-lightest">
             Eman Shaltout
