@@ -140,3 +140,8 @@
 .progress-bar.progress-animated {
   --value: var(--skill-level);
 }
+@media screen and (max-width:500px) {
+  .hero-sm{
+    margin-left: -26px !important;
+  }
+}
