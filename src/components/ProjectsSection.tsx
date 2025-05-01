@@ -5,8 +5,8 @@ import { ExternalLink, Github, Code } from "lucide-react";
 import jumiaImage from "@/assets/jumia.png";
 import todoImage from "@/assets/todo-list.png";
 import imgProject from "@/assets/img-project.png";
-import bookStore from "@/assets/book-Sore.jpg";
-import eCommerce from "@/assets/e-commarece.png";
+import bookStore from "@/assets/book-Sore.png";
+import eCommerce from "@/assets/e-commarece.jpg";
 import portfolio from "@/assets/my-portfolio.png";
 interface Project {
   id: number;
