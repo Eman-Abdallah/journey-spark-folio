@@ -1,5 +1,8 @@
 
 import { useEffect, useRef } from "react";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { Progress } from "@/components/ui/progress";
+import { Award, BarChart, ChartBar } from "lucide-react";
 
 interface Skill {
   name: string;
@@ -20,18 +23,15 @@ const SkillsSection = () => {
     { name: "RESTful APIs", level: 85, category: "backend", icon: "🔄" },
     { name: "SQL Server", level: 90, category: "backend", icon: "🗃️" },
     { name: "Entity Framework", level: 85, category: "backend", icon: "🔷" },
-    // { name: "Azure", level: 80, category: "other", icon: "☁️" },
-    // { name: "DevOps", level: 75, category: "other", icon: "🔄" },
     { name: "Machine Learning Basics", level: 70, category: "ai", icon: "🧠" },
     { name: "Prompt Engineering", level: 80, category: "ai", icon: "🤖" },
     { name: "AI Integration", level: 75, category: "ai", icon: "🔌" },
   ];
   
   const categories = [
-    { id: "frontend", name: "Frontend" },
-    { id: "backend", name: "Backend" },
-    { id: "ai", name: "AI & Emerging Tech" },
-    //{ id: "other", name: "Other" },
+    { id: "frontend", name: "Frontend", icon: ChartBar },
+    { id: "backend", name: "Backend", icon: BarChart },
+    { id: "ai", name: "AI & Emerging Tech", icon: Award },
   ];
   
   useEffect(() => {
@@ -47,6 +47,12 @@ const SkillsSection = () => {
                 skill.classList.remove("opacity-0");
                 skill.classList.add("translate-y-0");
                 skill.classList.remove("translate-y-10");
+                
+                // Also animate the progress bars
+                const progressBar = skill.querySelector(".progress-bar");
+                if (progressBar) {
+                  progressBar.classList.add("progress-animated");
+                }
               }, index * 100);
             });
             observer.unobserve(entry.target);
@@ -68,46 +74,57 @@ const SkillsSection = () => {
   }, []);
   
   return (
-    <section id="skills">
+    <section id="skills" className="bg-theme-lightBlue">
       <div className="container-lg">
         <h2 className="section-title">Skills & Expertise</h2>
         
-        <div ref={sectionRef} className="grid gap-10">
-          {categories.map((category) => (
-            <div key={category.id} className="mb-8">
-              <h3 className="text-2xl font-bold mb-6 text-theme-highlight">
-                {category.name}
-              </h3>
-              
-              <div className="grid md:grid-cols-2 gap-6">
-                {skills
-                  .filter((skill) => skill.category === category.id)
-                  .map((skill, index) => (
-                    <div 
-                      key={skill.name} 
-                      className="skill-item opacity-0 translate-y-10 transform transition-all duration-500 ease-out card flex flex-col"
-                    >
-                      <div className="flex justify-between items-center mb-2">
-                        <div className="flex items-center">
-                          <span className="text-2xl mr-3">{skill.icon}</span>
-                          <span className="font-medium">{skill.name}</span>
+        <div ref={sectionRef} className="mt-10">
+          <Tabs defaultValue="frontend" className="w-full">
+            <TabsList className="grid grid-cols-3 mb-8 w-full max-w-md mx-auto">
+              {categories.map((category) => (
+                <TabsTrigger 
+                  key={category.id} 
+                  value={category.id}
+                  className="flex items-center gap-2 data-[state=active]:bg-theme-highlight data-[state=active]:text-theme-blue"
+                >
+                  <category.icon className="h-4 w-4" />
+                  {category.name}
+                </TabsTrigger>
+              ))}
+            </TabsList>
+            
+            {categories.map((category) => (
+              <TabsContent key={category.id} value={category.id} className="space-y-6">
+                <div className="grid md:grid-cols-2 gap-6">
+                  {skills
+                    .filter((skill) => skill.category === category.id)
+                    .map((skill, index) => (
+                      <div 
+                        key={skill.name} 
+                        className="skill-item opacity-0 translate-y-10 transform transition-all duration-500 ease-out bg-theme-blue/20 rounded-lg p-6 shadow-lg backdrop-blur-sm border border-theme-highlight/10"
+                      >
+                        <div className="flex justify-between items-center mb-2">
+                          <div className="flex items-center">
+                            <span className="text-2xl mr-3">{skill.icon}</span>
+                            <span className="font-medium">{skill.name}</span>
+                          </div>
+                          <span className="text-theme-highlight font-semibold">{skill.level}%</span>
                         </div>
-                        <span className="text-theme-highlight">{skill.level}%</span>
+                        <div className="w-full mt-2">
+                          <Progress 
+                            value={0} 
+                            max={100}
+                            className="progress-bar h-2 bg-theme-blue/30"
+                            indicatorClassName="bg-theme-highlight transition-transform duration-1000 ease-out"
+                            data-max={skill.level}
+                          />
+                        </div>
                       </div>
-                      <div className="w-full bg-theme-blue rounded-full h-2 mt-2 overflow-hidden">
-                        <div 
-                          className="skill-bar transition-all duration-1000 ease-out"
-                          style={{ width: `${skill.level}%`, transform: "translateX(-100%)" }}
-                          onAnimationEnd={(e) => {
-                            e.currentTarget.style.transform = "translateX(0)";
-                          }}
-                        ></div>
-                      </div>
-                    </div>
-                  ))}
-              </div>
-            </div>
-          ))}
+                    ))}
+                </div>
+              </TabsContent>
+            ))}
+          </Tabs>
         </div>
       </div>
     </section>
