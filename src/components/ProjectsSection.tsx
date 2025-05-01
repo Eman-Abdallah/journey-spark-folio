@@ -7,6 +7,7 @@ import todoImage from "@/assets/todo-list.png";
 import imgProject from "@/assets/img-project.png";
 import bookStore from "@/assets/book-Sore.png";
 import eCommerce from "@/assets/e-commarece.png";
+import portfolio from "@/assets/my-portfolio.png";
 interface Project {
   id: number;
   title: string;
@@ -72,16 +73,16 @@ const ProjectsSection = () => {
       githubUrl: "https://github.com/Eman-Abdallah/Todo-List",
       featured: false
     },
-    // {
-    //   id: 6,
-    //   title: " Drum Machine",
-    //   description: "Developed an interactive web-based drum machine that allows users to play and sequence drum sounds using both mouse clicks and keyboard inputs.",
-    //   image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&q=80&w=600",
-    //   technologies: ["React", "JavaScript", "CSS","Web Audio API"],
-    //   demoUrl: "https://eman-abdallah.github.io/drum-machine/",
-    //   githubUrl: "https://github.com/Eman-Abdallah/drum-machine",
-    //   featured: false
-    // }
+    {
+      id: 6,
+      title: " My Front-end Portfolio",
+      description: "Developed an interactive web-based drum machine that allows users to play and sequence drum sounds using both mouse clicks and keyboard inputs.",
+      image: portfolio,
+      technologies: ["Angular", "TypeScript", "SCSS","Swiper","Angular Animation"],
+      demoUrl: "https://eman-abdallah.github.io/My-portfolio/",
+      githubUrl: "https://github.com/Eman-Abdallah/My-portfolio",
+      featured: true
+    }
   ];
   
   const filters = [
