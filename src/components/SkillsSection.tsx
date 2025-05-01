@@ -31,7 +31,7 @@ const SkillsSection = () => {
   const categories = [
     { id: "frontend", name: "Frontend", icon: ChartBar },
     { id: "backend", name: "Backend", icon: BarChart },
-    { id: "ai", name: "AI & Emerging Tech", icon: Award },
+    { id: "ai", name: "AI ", icon: Award },
   ];
 
   useEffect(() => {
