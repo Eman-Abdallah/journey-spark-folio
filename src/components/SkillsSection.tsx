@@ -103,13 +103,13 @@ const SkillsSection = () => {
 
             {categories.map((category) => (
               <TabsContent key={category.id} value={category.id} className="space-y-6">
-                <div className="grid md:grid-cols-2 gap-6 glass-card ">
+                <div className="grid md:grid-cols-2 gap-6  ">
                   {skills
                     .filter((skill) => skill.category === category.id)
                     .map((skill) => (
                       <div
                         key={skill.name}
-                        className="skill-item opacity-0 translate-y-10 transition-all duration-700 ease-out bg-theme-blue/20 rounded-lg p-6 shadow-lg backdrop-blur-sm border border-theme-highlight/10"
+                        className="skill-item opacity-0 translate-y-10 transition-all duration-700 ease-out glass-card rounded-lg p-6 shadow-lg backdrop-blur-sm border border-theme-highlight/10"
                       >
                         <div className="flex justify-between items-center mb-2">
                           <div className="flex items-center">
