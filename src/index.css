@@ -1,3 +1,4 @@
+
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap');
 
 @tailwind base;
@@ -133,4 +134,9 @@
 /* When animated class is added, animate to the correct position */
 .progress-bar.progress-animated[role="progressbar"] {
   transform: translateX(calc(var(--value) - 100%)) !important;
+}
+
+/* Update to use data-max attribute */
+.progress-bar.progress-animated {
+  --value: var(--skill-level);
 }

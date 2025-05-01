@@ -115,8 +115,10 @@ const SkillsSection = () => {
                             value={0} 
                             max={100}
                             className="progress-bar h-2 bg-theme-blue/30"
-                            indicatorClassName="bg-theme-highlight transition-transform duration-1000 ease-out"
                             data-max={skill.level}
+                            style={{
+                              "--skill-level": `${skill.level}%`,
+                            } as React.CSSProperties}
                           />
                         </div>
                       </div>
