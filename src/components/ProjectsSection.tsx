@@ -26,7 +26,7 @@ const ProjectsSection = () => {
   const projects: Project[] = [
     {
       id: 1,
-      title: "E-commerce Platform",
+      title: "Jumia Clone",
       description: "A full-stack e-commerce solution with Angular frontend and Firebase backend. Features include user authentication, product management and cart functionality.",
       //image: "https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7?auto=format&fit=crop&q=80&w=600",
       image: jumiaImage,
@@ -37,7 +37,7 @@ const ProjectsSection = () => {
     },
     {
       id: 2,
-      title: "E-commerce Microservices Platform",
+      title: "E-commerce Platform",
       description: "Architected and developed a scalable e-commerce platform using a microservices approach, with each domain feature split into its own service for maintainability and flexibility.",
       image: eCommerce,
       technologies: [".NET Core", "SQL Server", "REST APIs", "JWT","Entity Framework", "Swagger"],
