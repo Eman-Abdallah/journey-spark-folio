@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { Avatar } from "@/components/ui/avatar";
-
+import resume from "@/assets/resume.pdf";
 const aboutCards = [
   {
     title: "My Journey",
@@ -72,7 +72,7 @@ const AboutSection = () => {
 
             {/* Buttons */}
             <div className="flex gap-4 mt-6">
-              <a href="assets/resume.pdf" download className="btn-primary font-bold">
+              <a href={resume} download className="btn-primary font-bold">
                 Download My Resume
               </a>
               <a href="#projects" className="btn-outline">View Projects</a>
