@@ -49,7 +49,7 @@ const ProjectsSection = () => {
       title: "Online Bookstore API",
       description: "Developed a secure and scalable full-stack application for an online bookstore, implementing full CRUD operations, user authentication, and order processing.",
       image: bookStore,
-      technologies: [".NET Core", "ASP.NET Identity", "Entity Framework", "SQL Server", "Swagger","Angular"],
+      technologies: [".NET Core", "Entity Framework", "SQL Server","Angular"],
       githubUrl: "https://github.com/Eman-Abdallah/OnlineBookstoreAPI",
       featured: false
     },
