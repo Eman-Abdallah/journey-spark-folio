@@ -103,7 +103,7 @@ const SkillsSection = () => {
 
             {categories.map((category) => (
               <TabsContent key={category.id} value={category.id} className="space-y-6">
-                <div className="grid md:grid-cols-2 gap-6">
+                <div className="grid md:grid-cols-2 gap-6 glass-card ">
                   {skills
                     .filter((skill) => skill.category === category.id)
                     .map((skill) => (
