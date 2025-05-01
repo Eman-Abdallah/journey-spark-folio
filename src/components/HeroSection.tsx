@@ -24,6 +24,7 @@ const HeroSection = () => {
           })
           .join("");
 
+        // Update the inner text without affecting layout
         titleRef.current.innerText = newText;
 
         if (iteration <= originalText.length) {
@@ -48,13 +49,15 @@ const HeroSection = () => {
           <h1 className="text-5xl md:text-7xl font-bold mb-2 text-theme-lightest">
             Eman Shaltout
           </h1>
-          <h2 
-            ref={titleRef}
-            className="text-4xl md:text-6xl font-bold text-theme-slate mb-6"
-          >
-            Full-Stack Developer
-          </h2>
-          <p className="text-xl text-theme-lightest max-w-lg mb-8">
+          <div className="h-[56px] md:h-[72px]"> {/* Fixed-height container for animated text */}
+            <h2 
+              ref={titleRef}
+              className="text-4xl md:text-6xl font-bold text-theme-slate"
+            >
+              Full-Stack Developer
+            </h2>
+          </div>
+          <p className="text-xl text-theme-lightest max-w-lg mb-8 mt-6">
             I build exceptional and accessible digital experiences for the web. 
             Specializing in Angular, .NET, and SQL Server with a passion for creating beautiful and functional applications.
           </p>
