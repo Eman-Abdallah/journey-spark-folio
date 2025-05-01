@@ -3,7 +3,7 @@ import { useEffect, useRef } from "react";
 import { ArrowDown, Code, Database, Server } from "lucide-react";
 
 const HeroSection = () => {
-  const titleRef = useRef<HTMLHeadingElement>(null);
+  const titleRef = useRef<HTMLSpanElement>(null);
 
   useEffect(() => {
     const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
@@ -25,7 +25,7 @@ const HeroSection = () => {
           .join("");
 
         // Update the inner text without affecting layout
-        titleRef.current.innerText = newText;
+        titleRef.current.textContent = newText;
 
         if (iteration <= originalText.length) {
           frame++;
@@ -49,15 +49,10 @@ const HeroSection = () => {
           <h1 className="text-5xl md:text-7xl font-bold mb-2 text-theme-lightest">
             Eman Shaltout
           </h1>
-          <div className="h-[56px] md:h-[72px]"> {/* Fixed-height container for animated text */}
-            <h2 
-              ref={titleRef}
-              className="text-4xl md:text-6xl font-bold text-theme-slate"
-            >
-              Full-Stack Developer
-            </h2>
-          </div>
-          <p className="text-xl text-theme-lightest max-w-lg mb-8 mt-6">
+          <h2 className="text-4xl md:text-6xl font-bold text-theme-slate mb-6 h-[56px] md:h-[72px] flex items-center">
+            <span ref={titleRef} className="inline-block">Full-Stack Developer</span>
+          </h2>
+          <p className="text-xl text-theme-lightest max-w-lg mb-8">
             I build exceptional and accessible digital experiences for the web. 
             Specializing in Angular, .NET, and SQL Server with a passion for creating beautiful and functional applications.
           </p>
