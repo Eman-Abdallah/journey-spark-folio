@@ -59,15 +59,24 @@ const AboutSection = () => {
           >
             {aboutCards.map((card, index) => (
               <motion.div
-                key={index}
-                className="bg-white/80 backdrop-blur rounded-lg p-6 shadow-md border border-theme-highlight/20"
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.7, ease: "easeOut" }}
-              >
-                <h3 className="text-xl font-bold text-theme-blue mb-2">{card.title}</h3>
-                <p className="text-theme-slate text-md leading-relaxed">{card.text}</p>
-              </motion.div>
+              className="flex gap-6 overflow-x-auto cursor-grab"
+              drag="x"
+              dragConstraints={{ left: -300, right: 0 }}
+              whileTap={{ cursor: "grabbing" }}
+            >
+              {aboutCards.map((card, index) => (
+                <motion.div
+                  key={index}
+                  className="min-w-[280px] bg-white p-6 rounded-lg shadow-md flex-shrink-0"
+                  initial={{ opacity: 0, scale: 0.9 }}
+                  whileInView={{ opacity: 1, scale: 1 }}
+                  transition={{ duration: 0.5 }}
+                >
+                  <h3 className="text-xl font-bold text-theme-blue mb-2">{card.title}</h3>
+                  <p className="text-md text-theme-slate">{card.text}</p>
+                </motion.div>
+              ))}
+            </motion.div>
             ))}
 
             {/* Buttons */}
