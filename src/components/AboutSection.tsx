@@ -63,7 +63,7 @@ const AboutSection = () => {
                 className="bg-white/80 backdrop-blur rounded-lg p-6 shadow-md border border-theme-highlight/30 "
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.7, ease: "easeOut" }}
+                transition={{ duration: 0.8, ease: "easeOut" }}
               >
                 <h3 className="text-xl font-bold text-theme-highlight mb-2">{card.title}</h3>
                 <p className="text-theme-blue text-md leading-relaxed">{card.text}</p>
