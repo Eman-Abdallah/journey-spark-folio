@@ -230,7 +230,7 @@ const HeroSection = () => {
                 variants={floatingVariants}
                 transition={{ delay: 1 }}
               >
-                <Sparkles size={20} className="text-theme-highlight" />
+                <BrainCircuit size={20} className="text-theme-highlight" />
               </motion.div>
               <span className="text-theme-lightest">AI</span>
             </motion.div>
