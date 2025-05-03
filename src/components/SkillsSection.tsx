@@ -79,7 +79,7 @@ const SkillsSection = () => {
   };
 
   return (
-      <section id="skills" >
+      <section id="skills" className="relative z-10">
       <div className="container-lg">
         <h2 className="section-title">Skills & Expertise</h2>
 
