@@ -17,9 +17,11 @@ const Index = () => {
         
         <div className="relative">
           <Stars 
-            count={8} 
+            count={12} 
             colors={["text-theme-highlight", "text-theme-lightest"]} 
             className="opacity-30"
+                minSize={10}
+          maxSize={12}
           />
           <AboutSection />
         </div>
@@ -36,7 +38,7 @@ const Index = () => {
         <div className="relative">
           <Stars 
             count={12} 
-            colors={["text-theme-highlight", "text-theme-darkPink"]} 
+            colors={["text-theme-highlight", "text-theme-lightest"]} 
             className="opacity-30"
           />
           <ProjectsSection />
