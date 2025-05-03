@@ -1,6 +1,6 @@
 
-import React from "react";
-import { ArrowDown, Code, Database, Server, Sparkles, Star } from "lucide-react";
+import React, { useEffect, useState, useRef } from "react";
+import { ArrowDown, Code, Sparkles, Server, Star } from "lucide-react";
 import Typewriter from "./ui/Typewriter";
 import { motion } from "framer-motion";
 
@@ -9,6 +9,7 @@ const HeroSection = () => {
     "Full-Stack Developer", 
     "Angular Expert", 
     "UI/UX Designer", 
+    "AI Engineer",
     ".NET Developer", 
     "SQL Server Engineer"
   ];
@@ -230,9 +231,9 @@ const HeroSection = () => {
                 variants={floatingVariants}
                 transition={{ delay: 1 }}
               >
-                <Database size={20} className="text-theme-highlight" />
+                <Sparkles size={20} className="text-theme-highlight" />
               </motion.div>
-              <span className="text-theme-lightest">Database</span>
+              <span className="text-theme-lightest">AI</span>
             </motion.div>
           </motion.div>
         </motion.div>
