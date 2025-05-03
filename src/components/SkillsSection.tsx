@@ -79,7 +79,7 @@ const SkillsSection = () => {
   };
 
   return (
-    <section id="skills" >
+      <section id="skills" className="min-h-screen flex flex-col justify-center relative px-6 overflow-hidden">
       {/* Animated background elements */}
       <div className="absolute inset-0 -z-10">
         <div className="absolute top-20 left-10 w-64 h-64 bg-theme-highlight/10 rounded-full blur-3xl"></div>
