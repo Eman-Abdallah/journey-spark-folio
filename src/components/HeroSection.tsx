@@ -1,8 +1,8 @@
-
 import React, { useEffect, useState, useRef } from "react";
 import { ArrowDown, Code, Sparkles, Server, Star, BrainCircuit } from "lucide-react";
 import Typewriter from "./ui/Typewriter";
 import { motion } from "framer-motion";
+import Stars from "./ui/Stars";
 
 const HeroSection = () => {
   const specializations = [
@@ -13,18 +13,6 @@ const HeroSection = () => {
     "AI Enthusiast",
   ];
   
-  const starVariants = {
-    shine: {
-      scale: [1, 1.2, 1],
-      opacity: [0.7, 1, 0.7],
-      transition: {
-        repeat: Infinity,
-        repeatType: "reverse" as const,
-        duration: 2,
-      }
-    }
-  };
-
   const floatingVariants = {
     float: {
       y: [0, -5, 0],
@@ -56,31 +44,13 @@ const HeroSection = () => {
         <div className="absolute bottom-20 right-10 w-80 h-80 bg-theme-teal/10 rounded-full blur-3xl"></div>
       </div>
 
-      {/* Animated stars background */}
-      <div className="absolute inset-0 -z-5">
-        {Array.from({ length: 12 }).map((_, i) => (
-          <motion.div
-            key={i}
-            initial={{ opacity: 0.3 }}
-            animate="shine"
-            variants={starVariants}
-            custom={i * 0.2}
-            transition={{ delay: i * 0.15 }}
-            className="absolute"
-            style={{
-              top: `${Math.random() * 100}%`,
-              left: `${Math.random() * 100}%`,
-              animationDelay: `${Math.random() * 5}s`,
-            }}
-          >
-            <Star 
-              size={i % 3 === 0 ? 16 : i % 3 === 1 ? 12 : 8} 
-              className="text-theme-highlight opacity-70" 
-              fill={i % 2 === 0 ? "currentColor" : "none"}
-            />
-          </motion.div>
-        ))}
-      </div>
+      {/* Animated stars background using our new component */}
+      <Stars 
+        count={18} 
+        colors={["text-theme-highlight", "text-theme-lightest", "text-theme-teal"]} 
+        minSize={8}
+        maxSize={16}
+      />
 
       <div className="container-lg">
         <motion.div 
