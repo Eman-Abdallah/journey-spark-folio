@@ -8,10 +8,9 @@ const HeroSection = () => {
   const specializations = [
     "Full-Stack Developer", 
     "Angular Expert", 
-    "UI/UX Designer", 
-    "AI Engineer",
     ".NET Developer", 
-    "SQL Server Engineer"
+    "UI/UX Designer", 
+    "AI Enthusiast",
   ];
   
   const starVariants = {
@@ -157,8 +156,8 @@ const HeroSection = () => {
             transition={{ delay: 0.9, duration: 0.6 }}
             className="text-xl text-theme-lightest max-w-lg mb-8 desc-text relative"
           >
-            I build exceptional and accessible digital experiences for the web. 
-            Specializing in Angular, .NET, and SQL Server with a passion for creating beautiful and functional applications.
+            I craft impactful, accessible web applications with a strong focus on performance and user experience. 
+            Specializing in Angular, .NET, and SQL Server — driven by a deep passion for clean code, modern design, and AI-powered innovation.
             <motion.span 
               className="absolute -left-6 top-1/2 h-12 w-1 bg-gradient-to-b from-theme-highlight to-transparent rounded-full hidden md:block"
               animate={{
