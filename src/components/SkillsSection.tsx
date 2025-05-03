@@ -79,19 +79,12 @@ const SkillsSection = () => {
   };
 
   return (
-      <section id="skills" className="min-h-screen flex flex-col justify-center relative px-6 overflow-hidden">
+      <section id="skills" >
       {/* Animated background elements */}
       <div className="absolute inset-0 -z-10">
         <div className="absolute top-20 left-10 w-64 h-64 bg-theme-highlight/10 rounded-full blur-3xl"></div>
         <div className="absolute bottom-20 right-10 w-80 h-80 bg-theme-teal/10 rounded-full blur-3xl"></div>
       </div>
-
-      <Stars 
-        count={18} 
-        colors={["text-theme-highlight", "text-theme-lightest", "text-theme-teal"]} 
-        minSize={8}
-        maxSize={16}
-      />
       <div className="container-lg">
         <h2 className="section-title">Skills & Expertise</h2>
 
