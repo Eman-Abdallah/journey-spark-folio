@@ -25,17 +25,27 @@ const HeroSection = () => {
     }
   };
 
-  const floatingVariants = {
-    float: {
-      y: [0, -10, 0],
-      transition: {
-        repeat: Infinity,
-        repeatType: "reverse" as const,
-        duration: 4,
-      }
-    }
-  };
-  
+ const floatingVariants = {
+  float: {
+    y: [0, -5, 0],
+    transition: {
+      duration: 2,
+      repeat: Infinity,
+      ease: "easeInOut",
+    },
+  },
+};
+  const pulseVariants = {
+  animate: {
+    scale: [1, 1.1, 1],
+    opacity: [1, 0.9, 1],
+    transition: {
+      duration: 1.5,
+      repeat: Infinity,
+      ease: "easeInOut",
+    },
+  },
+};
   return (
     <section id="home" className="min-h-screen flex flex-col justify-center relative px-6 overflow-hidden">
       {/* Animated background elements */}
@@ -198,12 +208,20 @@ const HeroSection = () => {
               className="flex items-center gap-2 hover:-translate-y-1 transition-transform duration-300"
               whileHover={{ scale: 1.05 }}
             >
+                <motion.div
+                <motion.div
+                  variants={pulseVariants}
+                  animate="animate"
+                  className="rounded-full p-1 bg-theme-highlight/10"
+                >
+
               <motion.div
                 animate="float"
-                variants={floatingVariants}
+                variants={pulseVariants}
               >
                 <Code size={20} className="text-theme-highlight" />
-              </motion.div>
+              </motio n.div>
+              </motio n.div>
               <span className="text-theme-lightest">Frontend</span>
             </motion.div>
 
@@ -211,12 +229,19 @@ const HeroSection = () => {
               className="flex items-center gap-2 hover:-translate-y-1 transition-transform duration-300"
               whileHover={{ scale: 1.05 }}
             >
-              <motion.div
+                <motion.div
                 animate="float"
                 variants={floatingVariants}
-                transition={{ delay: 0.5 }}
+                transition={{ delay: 1 }}
               >
+                <motion.div
+                  variants={pulseVariants}
+                  animate="animate"
+                  className="rounded-full p-1 bg-theme-highlight/10"
+                >
+
                 <Server size={20} className="text-theme-highlight" />
+              </motion.div>
               </motion.div>
               <span className="text-theme-lightest">Backend</span>
             </motion.div>
@@ -225,13 +250,19 @@ const HeroSection = () => {
               className="flex items-center gap-2 hover:-translate-y-1 transition-transform duration-300"
               whileHover={{ scale: 1.05 }}
             >
-              <motion.div
+                <motion.div
                 animate="float"
                 variants={floatingVariants}
                 transition={{ delay: 1 }}
               >
+                 <motion.div
+                  variants={pulseVariants}
+                  animate="animate"
+                  className="rounded-full p-1 bg-theme-highlight/10"
+                >
                 <BrainCircuit size={20} className="text-theme-highlight" />
               </motion.div>
+            </motion.div>
               <span className="text-theme-lightest">AI</span>
             </motion.div>
           </motion.div>
