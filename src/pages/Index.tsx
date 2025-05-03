@@ -19,7 +19,7 @@ const Index = () => {
           <Stars 
             count={12} 
             colors={["text-theme-highlight", "text-theme-lightest"]} 
-            className="opacity-10"
+            className="opacity-70"
                 minSize={10}
           maxSize={12}
           />
