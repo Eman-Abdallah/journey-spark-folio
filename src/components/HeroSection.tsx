@@ -6,7 +6,7 @@ import { motion } from "framer-motion";
 
 const HeroSection = () => {
   const specializations = [
-    "Full-Stack Developer", 
+    "Full-Stack ", 
     "Angular Expert", 
     ".NET Developer", 
     "UI/UX Designer", 
