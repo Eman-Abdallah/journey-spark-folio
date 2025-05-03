@@ -2,7 +2,7 @@
 import { useEffect, useRef, useState } from "react";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Award, BarChart, ChartBar } from "lucide-react";
-import Stars from "./ui/Stars";
+
 interface Skill {
   name: string;
   level: number;
