@@ -3,6 +3,8 @@ import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Mail, Linkedin, Github } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
+import Stars from "./ui/Stars";
+
 
 const ContactSection = () => {
   const [formData, setFormData] = useState({
