@@ -181,7 +181,7 @@ const HeroSection = () => {
               whileHover={{ scale: 1.05 }}
             >
               <motion.div
-                variants={floatingVariants}
+                
                 animate="float"
               >
                 <motion.div
@@ -201,7 +201,7 @@ const HeroSection = () => {
             >
               <motion.div
                 animate="float"
-                variants={floatingVariants}
+                
                 transition={{ delay: 1 }}
               >
                 <motion.div
@@ -221,7 +221,7 @@ const HeroSection = () => {
             >
               <motion.div
                 animate="float"
-                variants={floatingVariants}
+               
                 transition={{ delay: 1 }}
               >
                 <motion.div
