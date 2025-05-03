@@ -43,7 +43,7 @@ const Stars: React.FC<StarsProps> = ({
   }));
 
   return (
-    <div className={`absolute inset-0 -z-5 ${className}`}>
+    <div className={`pointer-events-none absolute inset-0 -z-5 ${className}`}>
       {stars.map((star) => (
         <motion.div
           key={star.id}
