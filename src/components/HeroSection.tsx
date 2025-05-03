@@ -1,5 +1,5 @@
 
-import { useRef } from "react";
+import React from "react";
 import { ArrowDown, Code, Database, Server, Sparkles, Star } from "lucide-react";
 import Typewriter from "./ui/Typewriter";
 import { motion } from "framer-motion";
@@ -86,7 +86,7 @@ const HeroSection = () => {
               <span className="relative z-10">Contact Me</span>
               <span className="absolute inset-0 bg-theme-highlight bg-opacity-10 transform scale-x-0 origin-left transition-transform group-hover:scale-x-100 duration-300"></span>
             </a>
-          </div>
+          </motion.div>
           
           <motion.div 
             initial={{ opacity: 0, y: 10 }}
