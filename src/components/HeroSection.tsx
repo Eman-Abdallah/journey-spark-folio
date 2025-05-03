@@ -1,6 +1,6 @@
 
 import React, { useEffect, useState, useRef } from "react";
-import { ArrowDown, Code, Sparkles, Server, Star } from "lucide-react";
+import { ArrowDown, Code, Sparkles, Server, Star ,BrainCircuit } from "lucide-react";
 import Typewriter from "./ui/Typewriter";
 import { motion } from "framer-motion";
 
