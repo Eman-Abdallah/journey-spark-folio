@@ -184,7 +184,6 @@ const ShapeBackground: React.FC<ShapeBackgroundProps> = ({
             <svg width="100%" height="100%" className="absolute inset-0">
               {Array.from({ length: gridCells + 1 }).map((_, i) => (
                 <React.Fragment key={`grid-${i}`}>
-                  {/* Vertical lines */}
                   <motion.line 
                     x1={`${i * cellSize}%`}
                     y1="0%"
