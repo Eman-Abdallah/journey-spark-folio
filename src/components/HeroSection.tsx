@@ -2,7 +2,7 @@ import React, { useEffect, useState, useRef } from "react";
 import { ArrowDown, Code, Sparkles, Server, Star, BrainCircuit } from "lucide-react";
 import Typewriter from "./ui/Typewriter";
 import { motion } from "framer-motion";
-import Stars from "./ui/Stars";
+import CodeElements from "./ui/CodeElements";
 
 const HeroSection = () => {
   const specializations = [
@@ -44,8 +44,8 @@ const HeroSection = () => {
         <div className="absolute bottom-20 right-10 w-80 h-80 bg-theme-teal/10 rounded-full blur-3xl"></div>
       </div>
 
-      {/* Animated stars background using our new component */}
-      <Stars 
+      {/* Animated code elements background using our new component */}
+      <CodeElements 
         count={18} 
         colors={["text-theme-highlight", "text-theme-lightest", "text-theme-teal"]} 
         minSize={8}
@@ -319,7 +319,7 @@ const HeroSection = () => {
         }}
       ></motion.div>
       
-      {/* Additional star in the bottom right corner */}
+      {/* Additional code icon in the bottom right corner */}
       <motion.div 
         className="absolute bottom-24 right-24 hidden md:block"
         animate={{
@@ -333,7 +333,7 @@ const HeroSection = () => {
           repeatType: "reverse"
         }}
       >
-        <Star size={24} className="text-theme-highlight opacity-50" fill="currentColor" />
+        <Code size={24} className="text-theme-highlight opacity-50" />
       </motion.div>
     </section>
   );

@@ -2,7 +2,7 @@
 import { useEffect, useRef, useState } from "react";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Award, BarChart, ChartBar } from "lucide-react";
-import Stars from "./ui/Stars";
+import CodeElements from "./ui/CodeElements";
 interface Skill {
   name: string;
   level: number;
@@ -86,8 +86,8 @@ const SkillsSection = () => {
         <div className="absolute bottom-20 right-10 w-80 h-80 bg-theme-teal/10 rounded-full blur-3xl"></div>
       </div>
 
-      {/* Animated stars background using our new component */}
-      <Stars 
+      {/* Animated code elements background using our new component */}
+      <CodeElements 
         count={18} 
         colors={["text-theme-highlight", "text-theme-lightest", "text-theme-teal"]} 
         minSize={8}

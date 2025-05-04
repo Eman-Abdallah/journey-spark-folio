@@ -6,7 +6,7 @@ import SkillsSection from "@/components/SkillsSection";
 import ProjectsSection from "@/components/ProjectsSection";
 import ContactSection from "@/components/ContactSection";
 import Footer from "@/components/Footer";
-import Stars from "@/components/ui/Stars";
+import CodeElements from "@/components/ui/CodeElements";
 
 const Index = () => {
   return (
@@ -16,18 +16,18 @@ const Index = () => {
         <HeroSection />
         
         <div className="relative">
-          <Stars 
+          <CodeElements 
             count={12} 
             colors={["text-theme-highlight", "text-theme-lightest"]} 
             className="opacity-70"
-                minSize={10}
-          maxSize={12}
+            minSize={10}
+            maxSize={12}
           />
           <AboutSection />
         </div>
         
         <div className="relative">
-          <Stars 
+          <CodeElements 
             count={10} 
             colors={["text-theme-teal", "text-theme-slate"]} 
             className="opacity-30"
@@ -36,7 +36,7 @@ const Index = () => {
         </div>
         
         <div className="relative">
-          <Stars 
+          <CodeElements 
             count={12} 
             colors={["text-theme-highlight", "text-theme-lightest"]} 
             className="opacity-30"
@@ -45,7 +45,7 @@ const Index = () => {
         </div>
         
         <div className="relative">
-          <Stars 
+          <CodeElements 
             count={10} 
             colors={["text-theme-highlight", "text-theme-lightest"]} 
             className="opacity-30"
@@ -55,7 +55,7 @@ const Index = () => {
       </main>
       
       <div className="relative">
-        <Stars 
+        <CodeElements 
           count={6} 
           colors={["text-theme-highlight", "text-theme-lightest"]} 
           minSize={6}
