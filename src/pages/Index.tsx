@@ -19,8 +19,8 @@ const Index = () => {
         <div className="relative">
           <ShapeBackground 
             type="circles"
-            color="text-theme-highlight/15" 
-            secondaryColor="text-theme-lightest/10"
+            color="text-theme-highlight" 
+            secondaryColor="text-theme-lightest"
             count={12}
           />
           <AboutSection />
