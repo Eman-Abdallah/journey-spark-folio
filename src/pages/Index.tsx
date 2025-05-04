@@ -48,8 +48,8 @@ const Index = () => {
         <div className="relative">
           <ShapeBackground 
             type="hexagons"
-            color="text-theme-highlight/10" 
-            secondaryColor="text-theme-lightest/8"
+            color="text-theme-teal/10" 
+            secondaryColor="text-theme-slate/8"
             count={10}
           />
           <ContactSection />
