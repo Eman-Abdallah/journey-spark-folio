@@ -131,7 +131,7 @@ const ProjectsSection = () => {
   }, [selectedFilter]); // Re-run when filter changes
   
   return (
-    <section id="projects" className="bg-theme-lightBlue position-relative">
+    <section id="projects" className="bg-theme-lightBlue ">
       
       <div className="container-lg">
         <h2 className="section-title">My Projects</h2>
