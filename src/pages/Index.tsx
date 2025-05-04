@@ -28,7 +28,7 @@ const Index = () => {
         
         <div className="relative">
           <ShapeBackground 
-            type="grid"
+            type="circles"
             color="text-theme-teal/10" 
             secondaryColor="text-theme-slate/8"
           />
