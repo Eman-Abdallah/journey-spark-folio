@@ -88,9 +88,9 @@ const SkillsSection = () => {
 
       {/* Animated code elements background using our new component */}
       <CodeElements 
-        count={18} 
+        count={10} 
         colors={["text-theme-highlight", "text-theme-lightest", "text-theme-teal"]} 
-        minSize={8}
+        minSize={10}
         maxSize={16}
       />
       <div className="container-lg">
