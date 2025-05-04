@@ -7,6 +7,7 @@ import ProjectsSection from "@/components/ProjectsSection";
 import ContactSection from "@/components/ContactSection";
 import Footer from "@/components/Footer";
 import CodeElements from "@/components/ui/CodeElements";
+import ShapeBackground from "@/components/ui/ShapeBackground";
 
 const Index = () => {
   return (
@@ -16,51 +17,50 @@ const Index = () => {
         <HeroSection />
         
         <div className="relative">
-          <CodeElements 
-            count={12} 
-            colors={["text-theme-highlight", "text-theme-lightest"]} 
-            className="opacity-70"
-            minSize={10}
-            maxSize={12}
+          <ShapeBackground 
+            type="circles"
+            color="text-theme-highlight/15" 
+            secondaryColor="text-theme-lightest/10"
+            count={12}
           />
           <AboutSection />
         </div>
         
         <div className="relative">
-          <CodeElements 
-            count={10} 
-            colors={["text-theme-teal", "text-theme-slate"]} 
-            className="opacity-30"
+          <ShapeBackground 
+            type="grid"
+            color="text-theme-teal/10" 
+            secondaryColor="text-theme-slate/8"
           />
           <SkillsSection />
         </div>
         
         <div className="relative">
-          <CodeElements 
-            count={12} 
-            colors={["text-theme-highlight", "text-theme-lightest"]} 
-            className="opacity-30"
+          <ShapeBackground 
+            type="triangles"
+            color="text-theme-highlight/15" 
+            secondaryColor="text-theme-lightest/10"
+            count={15}
           />
           <ProjectsSection />
         </div>
         
         <div className="relative">
-          <CodeElements 
-            count={10} 
-            colors={["text-theme-highlight", "text-theme-lightest"]} 
-            className="opacity-30"
+          <ShapeBackground 
+            type="hexagons"
+            color="text-theme-highlight/10" 
+            secondaryColor="text-theme-lightest/8"
+            count={10}
           />
           <ContactSection />
         </div>
       </main>
       
       <div className="relative">
-        <CodeElements 
-          count={6} 
-          colors={["text-theme-highlight", "text-theme-lightest"]} 
-          minSize={6}
-          maxSize={10}
-          className="opacity-20"
+        <ShapeBackground 
+          type="waves"
+          color="text-theme-highlight/15" 
+          secondaryColor="text-theme-teal/10"
         />
         <Footer />
       </div>

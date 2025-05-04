@@ -1,8 +1,9 @@
+
 import React, { useEffect, useState, useRef } from "react";
 import { ArrowDown, Code, Sparkles, Server, Star, BrainCircuit } from "lucide-react";
 import Typewriter from "./ui/Typewriter";
 import { motion } from "framer-motion";
-import CodeElements from "./ui/CodeElements";
+import ShapeBackground from "./ui/ShapeBackground";
 
 const HeroSection = () => {
   const specializations = [
@@ -44,12 +45,12 @@ const HeroSection = () => {
         <div className="absolute bottom-20 right-10 w-80 h-80 bg-theme-teal/10 rounded-full blur-3xl"></div>
       </div>
 
-      {/* Animated code elements background using our new component */}
-      <CodeElements 
-        count={18} 
-        colors={["text-theme-highlight", "text-theme-lightest", "text-theme-teal"]} 
-        minSize={8}
-        maxSize={16}
+      {/* Animated shape background for hero */}
+      <ShapeBackground 
+        type="dots"
+        color="text-theme-highlight/15" 
+        secondaryColor="text-theme-lightest/10"
+        count={20}
       />
 
       <div className="container-lg">
