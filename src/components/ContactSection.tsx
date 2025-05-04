@@ -3,7 +3,7 @@ import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Mail, Linkedin, Github } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
-import CodeElements from "./ui/CodeElements";
+import ContactElements from "./ui/ContactElements";
 
 const ContactSection = () => {
   const [formData, setFormData] = useState({
@@ -43,7 +43,7 @@ const ContactSection = () => {
       </div>
 
       {/* Animated code elements background using our new component */}
-      <CodeElements 
+      <ContactElements 
         count={10} 
         colors={["text-theme-highlight", "text-theme-lightest", "text-theme-teal"]} 
         minSize={10}
