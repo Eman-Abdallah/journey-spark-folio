@@ -34,7 +34,7 @@ const ShapeBackground: React.FC<ShapeBackgroundProps> = ({
 
   const renderShapes = () => {
     switch (type) {
-      case "waves":
+      case "waves": {
         return (
           <div className="absolute inset-0 overflow-hidden pointer-events-none">
             <svg width="100%" height="100%" className="absolute inset-0">
@@ -61,121 +61,147 @@ const ShapeBackground: React.FC<ShapeBackgroundProps> = ({
             </svg>
           </div>
         );
+      }
       
-      case "circles":
-        return shapes.map((shape) => (
-          <motion.div
-            key={shape.id}
-            className="absolute"
-            style={{ top: shape.top, left: shape.left }}
-            initial={{ opacity: 0 }}
-            animate={{ 
-              opacity: [0.3, 0.5, 0.3],
-              scale: [shape.scale, shape.scale * 1.1, shape.scale],
-            }}
-            transition={{
-              repeat: Infinity,
-              repeatType: "reverse",
-              duration: 4 + shape.delay,
-              delay: shape.delay
-            }}
-          >
-            <Circle size={shape.size} className={shape.color} />
-          </motion.div>
-        ));
+      case "circles": {
+        return (
+          <div className="absolute inset-0 pointer-events-none">
+            {shapes.map((shape) => (
+              <motion.div
+                key={shape.id}
+                className="absolute"
+                style={{ top: shape.top, left: shape.left }}
+                initial={{ opacity: 0 }}
+                animate={{ 
+                  opacity: [0.3, 0.5, 0.3],
+                  scale: [shape.scale, shape.scale * 1.1, shape.scale],
+                }}
+                transition={{
+                  repeat: Infinity,
+                  repeatType: "reverse",
+                  duration: 4 + shape.delay,
+                  delay: shape.delay
+                }}
+              >
+                <Circle size={shape.size} className={shape.color} />
+              </motion.div>
+            ))}
+          </div>
+        );
+      }
       
-      case "triangles":
-        return shapes.map((shape) => (
-          <motion.div
-            key={shape.id}
-            className="absolute"
-            style={{ top: shape.top, left: shape.left }}
-            initial={{ opacity: 0, rotate: shape.rotate }}
-            animate={{ 
-              opacity: [0.3, 0.5, 0.3],
-              rotate: [shape.rotate, shape.rotate + 15, shape.rotate]
-            }}
-            transition={{
-              repeat: Infinity,
-              repeatType: "reverse",
-              duration: 5 + shape.delay,
-              delay: shape.delay
-            }}
-          >
-            <Triangle size={shape.size} className={shape.color} />
-          </motion.div>
-        ));
+      case "triangles": {
+        return (
+          <div className="absolute inset-0 pointer-events-none">
+            {shapes.map((shape) => (
+              <motion.div
+                key={shape.id}
+                className="absolute"
+                style={{ top: shape.top, left: shape.left }}
+                initial={{ opacity: 0, rotate: shape.rotate }}
+                animate={{ 
+                  opacity: [0.3, 0.5, 0.3],
+                  rotate: [shape.rotate, shape.rotate + 15, shape.rotate]
+                }}
+                transition={{
+                  repeat: Infinity,
+                  repeatType: "reverse",
+                  duration: 5 + shape.delay,
+                  delay: shape.delay
+                }}
+              >
+                <Triangle size={shape.size} className={shape.color} />
+              </motion.div>
+            ))}
+          </div>
+        );
+      }
       
-      case "squares":
-        return shapes.map((shape) => (
-          <motion.div
-            key={shape.id}
-            className="absolute"
-            style={{ top: shape.top, left: shape.left }}
-            initial={{ opacity: 0, rotate: shape.rotate }}
-            animate={{ 
-              opacity: [0.3, 0.6, 0.3],
-              rotate: [shape.rotate, shape.rotate + 20, shape.rotate]
-            }}
-            transition={{
-              repeat: Infinity,
-              repeatType: "reverse",
-              duration: 6 + shape.delay,
-              delay: shape.delay
-            }}
-          >
-            <Square size={shape.size} className={shape.color} />
-          </motion.div>
-        ));
+      case "squares": {
+        return (
+          <div className="absolute inset-0 pointer-events-none">
+            {shapes.map((shape) => (
+              <motion.div
+                key={shape.id}
+                className="absolute"
+                style={{ top: shape.top, left: shape.left }}
+                initial={{ opacity: 0, rotate: shape.rotate }}
+                animate={{ 
+                  opacity: [0.3, 0.6, 0.3],
+                  rotate: [shape.rotate, shape.rotate + 20, shape.rotate]
+                }}
+                transition={{
+                  repeat: Infinity,
+                  repeatType: "reverse",
+                  duration: 6 + shape.delay,
+                  delay: shape.delay
+                }}
+              >
+                <Square size={shape.size} className={shape.color} />
+              </motion.div>
+            ))}
+          </div>
+        );
+      }
       
-      case "hexagons":
-        return shapes.map((shape) => (
-          <motion.div
-            key={shape.id}
-            className="absolute"
-            style={{ top: shape.top, left: shape.left }}
-            initial={{ opacity: 0 }}
-            animate={{ 
-              opacity: [0.2, 0.4, 0.2],
-              scale: [shape.scale, shape.scale * 1.1, shape.scale],
-            }}
-            transition={{
-              repeat: Infinity,
-              repeatType: "reverse",
-              duration: 7 + shape.delay,
-              delay: shape.delay
-            }}
-          >
-            <Hexagon size={shape.size} className={shape.color} />
-          </motion.div>
-        ));
+      case "hexagons": {
+        return (
+          <div className="absolute inset-0 pointer-events-none">
+            {shapes.map((shape) => (
+              <motion.div
+                key={shape.id}
+                className="absolute"
+                style={{ top: shape.top, left: shape.left }}
+                initial={{ opacity: 0 }}
+                animate={{ 
+                  opacity: [0.2, 0.4, 0.2],
+                  scale: [shape.scale, shape.scale * 1.1, shape.scale],
+                }}
+                transition={{
+                  repeat: Infinity,
+                  repeatType: "reverse",
+                  duration: 7 + shape.delay,
+                  delay: shape.delay
+                }}
+              >
+                <Hexagon size={shape.size} className={shape.color} />
+              </motion.div>
+            ))}
+          </div>
+        );
+      }
       
-      case "dots":
-        return shapes.map((shape) => (
-          <motion.div
-            key={shape.id}
-            className="absolute"
-            style={{ top: shape.top, left: shape.left }}
-            initial={{ opacity: 0 }}
-            animate={{ 
-              opacity: [0.2, 0.5, 0.2],
-              scale: [shape.scale, shape.scale * 1.2, shape.scale],
-            }}
-            transition={{
-              repeat: Infinity,
-              repeatType: "reverse",
-              duration: 4 + shape.delay,
-              delay: shape.delay
-            }}
-          >
-            <div 
-              className={`rounded-full ${shape.color}`}
-              style={{ width: shape.size / 2, height: shape.size / 2 }}
-            ></div>
-          </motion.div>
-        ));
+      case "dots": {
+        return (
+          <div className="absolute inset-0 pointer-events-none">
+            {shapes.map((shape) => (
+              <motion.div
+                key={shape.id}
+                className="absolute"
+                style={{ top: shape.top, left: shape.left }}
+                initial={{ opacity: 0 }}
+                animate={{ 
+                  opacity: [0.2, 0.5, 0.2],
+                  scale: [shape.scale, shape.scale * 1.2, shape.scale],
+                }}
+                transition={{
+                  repeat: Infinity,
+                  repeatType: "reverse",
+                  duration: 4 + shape.delay,
+                  delay: shape.delay
+                }}
+              >
+                <div 
+                  className={`rounded-full ${shape.color}`}
+                  style={{ width: shape.size / 2, height: shape.size / 2 }}
+                ></div>
+              </motion.div>
+            ))}
+          </div>
+        );
+      }
         
-      case "grid":
+      case "grid": {
         const gridCells = 12;
         const cellSize = 100 / gridCells;
         
@@ -231,6 +257,7 @@ const ShapeBackground: React.FC<ShapeBackgroundProps> = ({
             </svg>
           </div>
         );
+      }
       
       default:
         return null;
