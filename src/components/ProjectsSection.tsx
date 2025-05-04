@@ -8,7 +8,6 @@ import imgProject from "@/assets/img-project.png";
 import bookStore from "@/assets/book-Sore.png";
 import eCommerce from "@/assets/e-commarece.jpg";
 import portfolio from "@/assets/my-portfolio.png";
-import ProjectElements from "./ui/ProjectElements";
 interface Project {
   id: number;
   title: string;
@@ -133,10 +132,7 @@ const ProjectsSection = () => {
   
   return (
     <section id="projects" className="bg-theme-lightBlue position-relative">
-      {/* Animated code elements background using our new component */}
-      <ProjectElements 
-        count={10} 
-      />
+      
       <div className="container-lg">
         <h2 className="section-title">My Projects</h2>
         
