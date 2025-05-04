@@ -19,7 +19,7 @@ const aboutCards = [
 
 const AboutSection = () => {
   return (
-    <section id="about" className="bg-theme-lightBlue py-16">
+    <section id="about" className="bg-theme-lightBlue py-16 position-relative">
             <AboutElements 
         count={10} 
       />

@@ -132,7 +132,7 @@ const ProjectsSection = () => {
   }, [selectedFilter]); // Re-run when filter changes
   
   return (
-    <section id="projects" className="bg-theme-lightBlue">
+    <section id="projects" className="bg-theme-lightBlue position-relative">
       {/* Animated code elements background using our new component */}
       <ProjectElements 
         count={10} 

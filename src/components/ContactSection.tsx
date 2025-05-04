@@ -36,7 +36,7 @@ const ContactSection = () => {
   };
   
   return (
-    <section id="contact">
+    <section id="contact" className="position-relative">
       {/* Animated background elements */}
       <div className="absolute inset-0 -z-10">
         <div className="absolute top-20 left-10 w-64 h-64 bg-theme-highlight/10 rounded-full blur-3xl"></div>
