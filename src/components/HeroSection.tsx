@@ -1,9 +1,7 @@
-
 import React, { useEffect, useState, useRef } from "react";
 import { ArrowDown, Code, Sparkles, Server, Star, BrainCircuit } from "lucide-react";
 import Typewriter from "./ui/Typewriter";
 import { motion } from "framer-motion";
-import ShapeBackground from "./ui/ShapeBackground";
 
 const HeroSection = () => {
   const specializations = [
@@ -44,14 +42,6 @@ const HeroSection = () => {
         <div className="absolute top-20 left-10 w-64 h-64 bg-theme-highlight/10 rounded-full blur-3xl"></div>
         <div className="absolute bottom-20 right-10 w-80 h-80 bg-theme-teal/10 rounded-full blur-3xl"></div>
       </div>
-
-      {/* Animated shape background for hero */}
-      <ShapeBackground 
-        type="dots"
-        color="text-theme-highlight/15" 
-        secondaryColor="text-theme-lightest/10"
-        count={20}
-      />
 
       <div className="container-lg">
         <motion.div 
