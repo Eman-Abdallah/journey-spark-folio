@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { Avatar } from "@/components/ui/avatar";
 import resume from "@/assets/resume.pdf";
+import AboutElements from "./ui/AboutElements";
 const aboutCards = [
   {
     title: "My Journey",
@@ -19,6 +20,9 @@ const aboutCards = [
 const AboutSection = () => {
   return (
     <section id="about" className="bg-theme-lightBlue py-16">
+            <AboutElements 
+        count={10} 
+      />
       <div className="container-lg">
         <h2 className="section-title mb-10 text-center">About Me</h2>
 
