@@ -44,7 +44,7 @@ const ContactSection = () => {
 
       {/* Animated code elements background using our new component */}
       <ContactElements 
-        count={12} 
+        count={10} 
         colors={["text-theme-highlight", "text-theme-lightest", "text-theme-teal"]} 
         minSize={12}
         maxSize={16}

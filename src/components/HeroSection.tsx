@@ -2,7 +2,7 @@ import React, { useEffect, useState, useRef } from "react";
 import { ArrowDown, Code, Sparkles, Server, Star, BrainCircuit } from "lucide-react";
 import Typewriter from "./ui/Typewriter";
 import { motion } from "framer-motion";
-
+import CodeElements from "./ui/CodeElements";
 const HeroSection = () => {
   const specializations = [
     "Full-Stack ", 
@@ -37,7 +37,13 @@ const HeroSection = () => {
   
   return (
     <section id="home" className="min-h-screen flex flex-col justify-center relative px-6 overflow-hidden">
-
+            {/* Animated code elements background using our new component */}
+            <CodeElements 
+        count={10} 
+        colors={["text-theme-highlight", "text-theme-lightest", "text-theme-teal"]} 
+        minSize={10}
+        maxSize={16}
+      />
 
       <div className="container-lg">
         <motion.div 
