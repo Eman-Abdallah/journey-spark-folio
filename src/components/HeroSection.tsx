@@ -37,11 +37,7 @@ const HeroSection = () => {
   
   return (
     <section id="home" className="min-h-screen flex flex-col justify-center relative px-6 overflow-hidden">
-      {/* Animated background elements */}
-      <div className="absolute inset-0 -z-10">
-        <div className="absolute top-20 left-10 w-64 h-64 bg-theme-highlight/10 rounded-full blur-3xl"></div>
-        <div className="absolute bottom-20 right-10 w-80 h-80 bg-theme-teal/10 rounded-full blur-3xl"></div>
-      </div>
+
 
       <div className="container-lg">
         <motion.div 
