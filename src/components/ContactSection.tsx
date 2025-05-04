@@ -3,7 +3,7 @@ import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Mail, Linkedin, Github } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
-
+import CodeElements from "./ui/CodeElements";
 
 const ContactSection = () => {
   const [formData, setFormData] = useState({
@@ -35,12 +35,20 @@ const ContactSection = () => {
   };
   
   return (
-    <section id="contact" c>
-      {/* Animated background elements */}
-      <div className="absolute inset-0 -z-10">
+    <section id="contact"  className="relative z-10">
+                 {/* Animated background elements */}
+                 <div className="absolute inset-0 -z-10">
         <div className="absolute top-20 left-10 w-64 h-64 bg-theme-highlight/10 rounded-full blur-3xl"></div>
         <div className="absolute bottom-20 right-10 w-80 h-80 bg-theme-teal/10 rounded-full blur-3xl"></div>
       </div>
+
+      {/* Animated code elements background using our new component */}
+      <CodeElements 
+        count={10} 
+        colors={["text-theme-highlight", "text-theme-lightest", "text-theme-teal"]} 
+        minSize={10}
+        maxSize={16}
+      />
       <div className="container-lg">
         <h2 className="section-title">Get In Touch</h2>
         
