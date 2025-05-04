@@ -44,9 +44,9 @@ const ContactSection = () => {
 
       {/* Animated code elements background using our new component */}
       <ContactElements 
-        count={10} 
+        count={12} 
         colors={["text-theme-highlight", "text-theme-lightest", "text-theme-teal"]} 
-        minSize={10}
+        minSize={12}
         maxSize={16}
       />
       <div className="container-lg">
