@@ -108,7 +108,7 @@ const HeroSection = () => {
                 delay: 0.5
               }}
             >
-              <Code size={20} className="text-theme-highlight" fill="currentColor" />
+              <Star size={20} className="text-theme-highlight" fill="currentColor" />
             </motion.div>
           </motion.h1>
 
