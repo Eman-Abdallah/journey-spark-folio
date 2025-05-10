@@ -2,7 +2,7 @@
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
-
+import logoImage from "@/assets/logo2.png";
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -28,7 +28,12 @@ const Navbar = () => {
     <header className={`fixed top-0 w-full z-50 transition-all duration-300 ${isScrolled ? "bg-theme-blue bg-opacity-90 backdrop-blur-sm py-4 shadow-md" : "py-6"}`}>
       <div className="container-lg flex justify-between items-center">
         <a href="#home" className="text-2xl font-bold text-theme-highlight font-poppins">
-          Eman<span className="text-theme-lightest">Shaltout</span>
+          {/* Eman<span className="text-theme-lightest">Shaltout</span> */}
+          <img 
+                  src={logoImage}
+                  alt="Eman Shaltout" 
+                  className=" " width={"150px"}  height={"150px"}
+                />
         </a>
         
         {/* Mobile menu button */}
